@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bài Kiểm Tra - Trung tâm Anh ngữ STM</title>
+  <style>
+    :root {
+      --primary: #0d9488;
+      --primary-dark: #0f766e;
+      --primary-light: #ccfbf1;
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --text: #1e293b;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --accent: #2563eb;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      background-color: var(--bg);
+      color: var(--text);
+      padding: 24px 16px;
+    }
+
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+      padding: 32px 28px;
+      border: 1px solid var(--border);
+    }
+
+    .header-banner {
+      text-align: center;
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 20px;
+      margin-bottom: 28px;
+    }
+
+    .header-banner h1 {
+      color: var(--primary-dark);
+      font-size: 24px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 6px;
+    }
+
+    .header-banner p {
+      color: var(--text-muted);
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .info-section {
+      background: #f0fdfa;
+      border: 1px solid #99f6e4;
+      border-radius: 8px;
+      padding: 18px 20px;
+      margin-bottom: 28px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+    }
+
+    .info-group {
+      flex: 1 1 200px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .info-group label {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--primary-dark);
+      text-transform: uppercase;
+    }
+
+    .info-group input, .info-group select {
+      padding: 9px 12px;
+      font-size: 14px;
+      border: 1.5px solid #cbd5e1;
+      border-radius: 6px;
+      outline: none;
+      background: #ffffff;
+      color: var(--text);
+      transition: border-color 0.2s;
+    }
+
+    .info-group input:focus, .info-group select:focus {
+      border-color: var(--primary);
+    }
+
+    .part-card {
+      margin-bottom: 32px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+      background: #ffffff;
+    }
+
+    .part-header {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      color: #ffffff;
+      padding: 12px 18px;
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+      text-transform: uppercase;
+    }
+
+    .part-body {
+      padding: 20px 22px;
+    }
+
+    .sub-section-title {
+      font-size: 14.5px;
+      font-weight: 700;
+      color: var(--accent);
+      background-color: #eff6ff;
+      border-left: 4px solid var(--accent);
+      padding: 8px 12px;
+      margin: 20px 0 14px 0;
+      border-radius: 0 4px 4px 0;
+    }
+
+    .sub-section-title:first-child {
+      margin-top: 0;
+    }
+
+    .passage-box {
+      background-color: #f8fafc;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      padding: 16px 18px;
+      margin: 16px 0;
+      font-style: italic;
+      color: #334155;
+      line-height: 1.7;
+    }
+
+    .cau-hoi {
+      padding: 14px 0;
+      border-bottom: 1px dashed #e2e8f0;
+    }
+
+    .cau-hoi:last-child {
+      border-bottom: none;
+    }
+
+    .cau-hoi-title {
+      font-weight: 600;
+      font-size: 15px;
+      margin-bottom: 8px;
+      color: var(--text);
+    }
+
+    .cau-hoi-title span.q-num {
+      color: var(--primary-dark);
+      font-weight: 700;
+    }
+
+    .options-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 6px;
+      margin-left: 4px;
+    }
+
+    .option-label {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 7px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14.5px;
+      transition: background 0.15s;
+    }
+
+    .option-label:hover {
+      background-color: #f1f5f9;
+    }
+
+    .option-label input[type="radio"] {
+      margin-top: 4px;
+      accent-color: var(--primary);
+      transform: scale(1.15);
+      cursor: pointer;
+    }
+
+    .submit-container {
+      text-align: center;
+      margin-top: 36px;
+      padding-top: 20px;
+      border-top: 2px dashed var(--border);
+    }
+
+    button#btnNopBai {
+      background: linear-gradient(135deg, #0d9488 0%, #059669 100%);
+      color: #ffffff;
+      padding: 14px 44px;
+      font-size: 16px;
+      font-weight: 700;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(13, 148, 136, 0.3);
+      transition: all 0.2s ease;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    button#btnNopBai:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(13, 148, 136, 0.4);
+    }
+
+    button#btnNopBai:active {
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="header-banner">
+    <h1>Trung tâm Anh ngữ STM</h1>
+    <p>ĐỀ KIỂM TRA ĐÁNH GIÁ NĂNG LỰC GIỮA HỌC KỲ 1 • TIẾNG ANH 6 (GLOBAL SUCCESS)</p>
+  </div>
+
+  <div class="info-section">
+    <div class="info-group">
+      <label for="lopHoc">Chọn Lớp Học:</label>
+      <select id="lopHoc">
+        <option value="Lớp 1">Lớp 1</option>
+        <option value="Lớp 2">Lớp 2</option>
+        <option value="Lớp 3">Lớp 3</option>
+        <option value="Lớp 4">Lớp 4</option>
+        <option value="Lớp 5">Lớp 5</option>
+        <option value="Lớp 6" selected>Lớp 6</option>
+        <option value="Lớp 7">Lớp 7</option>
+        <option value="Lớp 8">Lớp 8</option>
+        <option value="Lớp 9">Lớp 9</option>
+        <option value="Lớp 10">Lớp 10</option>
+        <option value="Lớp 11">Lớp 11</option>
+        <option value="Lớp 12">Lớp 12</option>
+      </select>
+    </div>
+    <div class="info-group" style="flex: 2 1 300px;">
+      <label for="tenHocSinh">Họ và Tên Học Sinh:</label>
+      <input type="text" id="tenHocSinh" placeholder="Nhập đầy đủ họ và tên học sinh...">
+    </div>
+  </div>
+
+  <div id="danhSachCauHoi">
+    <!-- ==================== PHẦN 1: NGỮ ÂM & TRỌNG ÂM (CÂU 1 - 4) ==================== -->
+    <div class="part-card">
+      <div class="part-header">Phần 1: Ngữ Âm & Trọng Âm (Phonetics & Stress)</div>
+      <div class="part-body">
+        <div class="sub-section-title">I. Mark the letter A, B, C, or D to indicate the word whose underlined part differs from the other three in pronunciation.</div>
+        
+        <div class="cau-hoi" id="cau1">
+          <div class="cau-hoi-title"><span class="q-num">Question 1.</span> Chọn từ có phần gạch chân phát âm khác:</div>
+          <div class="options-grid">
+            <label class="option-label"><input type="radio" name="q1" value="A"> A. st<u>ar</u></label>
+            <label class="option-label"><input type="radio" name="q1" value="B"> B. sm<u>ar</u>t</label>
+            <label class="option-label"><input type="radio" name="q1" value="C"> C. cl<u>a</u>ss</label>
+            <label class="option-label"><input type="radio" name="q1" value="D"> D. st<u>u</u>dy</label>
+          </div>
+        </div>
+
+        <div class="cau-hoi" id="cau2">
+          <div class="cau-hoi-title"><span class="q-num">Question 2.</span> Chọn từ có phần gạch chân phát âm khác:</div>
+          <div class="options-grid">
+            <label class="option-label"><input type="radio" name="q2" value="A"> A. lamp<u>s</u></label>
+            <label class="option-label"><input type="radio" name="q2" value="B"> B. sink<u>s</u></label>
+            <label class="option-label"><input type="radio" name="q2" value="C"> C. flat<u>s</u></label>
+            <label class="option-label"><input type="radio" name="q2" value="D"> D. bed<u>s</u></label>
+          </div>
+        </div>
+
+        <div class="sub-section-title">II. Mark the letter A, B, C, or D to indicate the word that differs from the other three in the position of primary stress.</div>
+
+        <div class="cau-hoi" id="cau3">
+          <div class="cau-hoi-title"><span class="q-num">Question 3.</span> Chọn từ có trọng âm chính khác với các từ còn lại:</div>
+          <div class="options-grid">
+            <label class="option-label"><input type="radio" name="q3" value="A"> A. compass</label>
+            <label class="option-label"><input type="radio" name="q3" value="B"> B. rubber</label>
+            <label class="option-label"><input type="radio" name="q3" value="C"> C. pencil</label>
+            <label class="option-label"><input type="radio" name="q3" value="D"> D. eraser</label>
+          </div>
+        </div>
+
+        <div class="cau-hoi" id="cau4">
+          <div class="cau-hoi-title"><span class="q-num">Question 4.</span> Chọn từ có trọng âm chính khác với các từ còn lại:</div>
+          <div class="options-grid">
+            <label class="option-label"><input type="radio" name="q4" value="A"> A. apartment</label>
+            <label class="option-label"><input type="radio" name="q4" value="B"> B. uniform</label>
+            <label class="option-label"><input type="radio" name="q4" value="C"> C. canteen</label>
+            <label class="option-label"><input type="radio" name="q4" value="D"> D. creative</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== PHẦN 2: TỪ VỰNG, NGỮ PHÁP & GIAO TIẾP (CÂU 5 - 16) ==================== -->
+    <div class="part-card">
+      <div class="part-header">Phần 2: Từ Vựng, Ngữ Pháp & Tình Huống Giao Tiếp (Lexico-Grammar & Communication)</div>
+      <div class="part-body">
+        <div class="sub-section-title">III. Mark the letter A, B, C, or D to indicate the correct answer to each of the following questions.</div>
+
+        <div class="cau-hoi" id="cau5">
+          <div class="cau-hoi-title"><span class="q-num">Question 5.</span> Students in boarding schools usually ______ their homework in the evening.</div>
+          <div class="options-grid">
+            <label class="option-label"><input type="radio" name="q5" value="A"> A. play</label>
+            <label class="option-label"><input type="radio" name="q5" value="B"> B. do</label>
+            <label class="option-label"><input type="radio" name="q5" value="C"> C. study</label>
+            <label class="option-label"><input type="radio" name="q5" value="D"> D. have</label>
+          </div>
+        </div>
+
+        <div class="cau-hoi" id="cau6">
+          <div class="cau-hoi-title"><span class="q-num">Question 6.</span> There ______ a large living room and three bedrooms in my aunt's country house.</div>
+          <div class="options-grid">
+            <label class="option-label"><input type="radio" name="q6" value="A"> A. is</label>
+            <label class="option-label"><input type="radio" name="q6" value="B"> B. are</label>
+            <label class="option-label"><input type="radio" name="q6" value="C"> C. have</label>
+            <label class="option-label"><input type="radio" name="q6" value="D"> D. has</label>
+          </div>
+        </div>
+
+        <div class="cau-hoi" id="cau7">
+          <div class="cau-hoi-title"><span class="q-num">Question 7.</span> Listen! Someone ______ the piano in the music room next door.</div>
+          <div class="options-grid">
+            <label class="option-label"><input type="radio" name="q7" value="A"> A. plays</label>
+            <label class="option-label"><input type="radio" name="q7" value="B"> B. play</label>
+            <label class="option-label"><input type="radio" name="q7" value="C"> C. is playing</label>
+            <label class="option-label"><input type="radio" name="q7" value="D"> D. are playing</label>
+          </div>
+        </div>
+
+        <div class="cau-hoi" id="cau8">
+          <div class="cau-hoi-title"><span class="q-num">Question 8.</span> Minh is very ______. He always shares his school lunch and candies with classmates.</div>
+          <div class="options-grid">
+            <label class="option-label"><input type="radio" name="q8" value="A"> A. confident</label>
+            <label class="option-label"><input type="radio" name="q8" value="B"> B. generous</label>
+            <label class="option-label"><input type="radio" name="q8" value="C"> C. shy</label>
+            <label class="option-label"><input type="radio" name="q8" value="D"> D. clever</label>
+          </div>
+        </div>
+
+        <div class="cau-hoi" id="cau9">
+          <div class="cau-hoi-title"><span class="q-num">Question 9.</span> My elder brother ______ goes to school on foot because his school is 5 kilometres away.</div>
+          <div class="options-grid">
+            <label class="option-label"><input type="radio" name="q9" value="A"> A. always</label>
+            <label class="option-label"><input type="radio" name="q9" value="B"> B. never</label>
+            <label class="option-label"><input type="radio" name="q9" value="C"> C. usually</label>
+            <label class="option-label"><input type="radio" name="q9" value="D"> D. often</label>
+          </div>
+        </div>
+
+        <div class="cau-hoi" id="cau10">
+          <div class="cau-hoi-title"><span class="q-num">Question 10.</span> Look at the desk! The notebook is ______ the computer and the table lamp.</div>
+          <div class="options-grid">
+            <label class="option-label"><input type="radio" name="q10" value="A"> A. under</label>
+            <label class="option-label"><input type="radio" name="q10" value="B"> B. between</label>
+            <label class="option-label"><input type="radio" name="q10" value="C"> C. next</label>
+            <label class="option-label"><input type="radio" name="q10" value="D"> D. opposite</label>
+          </div>
+        </div>
+
+        <div class="sub-section-title">IV. Mark the letter A, B, C, or D to indicate the word(s) CLOSEST in meaning to the underlined word(s).</div>
+
+        <div class="cau-hoi" id="cau11">
+          <div class="cau-hoi-title"><span class="q-num">Question 11 (Từ đồng nghĩa):</span> Phong is a <u>clever</u> student who always understands new lessons very quickly.</div>
+          <div class="options-grid">
+            <label class="option-label"><input type="radio" name="q11" value="A"> A. smart</label>
+            <label class="option-label"><input type="radio" name="q11" value="B"> B. lazy</label>
+            <label class="option-label"><input type="radio" name="q11" value="C"> C. clumsy</label>
+            <label class="option-label"><input type="radio" name="q11" value="D"> D. funny</label>
+          </div>
+        </div>
+
+        <div class="sub-section-title">V. Mark the letter A, B, C, or D to indicate the word(s) OPPOSITE in meaning to the underlined word(s).</div>
+
+        <div class="cau-hoi" id="cau12">
+          <div class="cau-hoi-title"><span class="q-num">Question 12 (Từ trái nghĩa):</span> Their new town house has a <u>huge</u> garden with many green trees and colorful flowers.</div>
+          <div class="options-grid">
+            <label class="option-label"><input type="radio" name="q12" value="A"> A. large</label>
+            <label class="option-label"><input type="radio" name="q12" value="B"> B. small</label>
+            <label class="option-label"><input type="radio" name="q12" value="C"> C. wide</label>
+            <label class="option-label"><input type="radio" name="q12" value="D"> D. beautiful</label>
+          </div>
+        </div>
+
+        <div class="sub-section-title">VI. Mark the letter A, B, C, or D to indicate the underlined part that needs correction.</div>
+
+        <div class="cau-hoi" id="cau13">
+          <div class="cau-hoi-title"><span class="q-num">Question 13:</span> (A) <u>There are</u> a comfortable sofa and a television in my grandparents' living room.</div>
+          <div class="options-grid">
+            <label class="option-label"><input type="radio" name="q13" value="A"> A. There are</label>
+            <label class="option-label"><input type="radio" name="q13" value="B"> B. sofa</label>
+            <label class="option-label"><input type="radio" name="q13" value="C"> C. in</label>
+            <label class="option-label"><input type="radio" name="q13" value="D"> D. grandparents'</label>
+          </div>
+        </div>
+
+        <div class="cau-hoi" id="cau14">
+          <div class="cau-hoi-title"><span class="q-num">Question 14:</span> Mai and Lan is (B) <u>riding</u> their bicycles to school at the moment.</div>
+          <div class="options-grid">
+            <label class="option-label"><input type="radio" name="q14" value="A"> A. is</label>
+            <label class="option-label"><input type="radio" name="q14" value="B"> B. riding</label>
+            <label class="option-label"><input type="radio" name="q14" value="C"> C. school</label>
+            <label class="option-label"><input type="radio" name="q14" value="D"> D. moment</label>
+          </div>
+        </div>
+
+        <div class="sub-section-title">VII. Mark the letter A, B, C, or D to indicate the most suitable response to complete each exchange.</div>
+
+        <div class="cau-hoi" id="cau15">
+          <div class="cau-hoi-title"><span class="q-num">Question 15:</span> An: "Would you like to come to my house for lunch this Saturday?" - Binh: "______"</div>
+          <div class="options-grid">
+            <label class="option-label"><input type="radio" name="q15" value="A"> A. Yes, I'd love to. Thanks!</label>
+            <label class="option-label"><input type="radio" name="q15" value="B"> B. No, I am not.</label>
+            <label class="option-label"><input type="radio" name="q15" value="C"> C. You're welcome.</label>
+            <label class="option-label"><input type="radio" name="q15" value="D"> D. I don't think so.</label>
+          </div>
+        </div>
+
+        <div class="cau-hoi" id="cau16">
+          <div class="cau-hoi-title"><span class="q-num">Question 16:</span> Teacher: "Can you pass me the pencil sharpener, please?" - Nam: "______"</div>
+          <div class="options-grid">
+            <label class="option-label"><input type="radio" name="q16" value="A"> A. Never mind.</label>
+            <label class="option-label"><input type="radio" name="q16" value="B"> B. Yes, of course. Here you are.</label>
+            <label class="option-label"><input type="radio" name="q16" value="C"> C. No, thanks.</label>
+            <label class="option-label"><input type="radio" name="q16" value="D"> D. It's on Monday.</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== PHẦN 3: KỸ NĂNG ĐỌC HIỂU (CÂU 17 - 28) ==================== -->
+    <div class="part-card">
+      <div class="part-header">Phần 3: Kỹ Năng Đọc Hiểu (Reading Comprehension)</div>
+      <div class="part-body">
+        <div class="sub-section-title">VIII. Read the passage and choose the correct word for each numbered blank.</div>
+        
+        <div class="passage-box">
+          My name is Vy and I am a sixth-grade student at Nguyen Du Secondary School. Every weekday, I get up early at 6 o'clock and (17)______ my school uniform. My school is not far from my house, so I often walk there with my best friend, Ha. At school, we (18)______ many interesting subjects like Maths, Science, History, and English. My favourite subject is English because our teacher is very (19)______ and enthusiastic. During break time, we usually go to the (20)______ to read books or play badminton in the schoolyard. My school also has an English club. We (21)______ to the club every Tuesday afternoon. I really love my school because it is a friendly (22)______ to learn and make new friends.
+        </div>
+
+        <div class="cau-hoi" id="cau17">
+          <div class="cau-hoi-title"><span class="q-num">Question 17:</span> Điền vào chỗ trống số (17):</div>
+          <div class="options-grid">
+            <label class="option-label"><input type="radio" name="q17" value="A"> A. wear</label>
+            <label class="option-label"><input type="radio" name="q17" value="B"> B. put</label>
+            <label class="option-label"><input type="radio" name="q17" value="C"> C. take</label>
+            <label class="option-label"><input type="radio" name="q17" value="D"> D. do</label>
+          </div>
+        </div>
+
+        <div class="cau-hoi" id="cau18">
+          <div class="cau-hoi-title"><span class="q-num">Question 18:</span> Điền vào chỗ trống số (18):</div>
+          <div class="options-grid">
+            <label class="option-label"><input type="radio" name="q18" value="A"> A. make</label>
+            <label class="option-label"><input type="radio" name="q18" value="B"> B. study</label>
+            <label class="option-label"><input type="radio" name="q18" value="C"> C. play</label>
+            <label class="option-label"><input type="radio" name="q18" value="D"> D. work</label>
+          </div>
+        </div>
+
+        <div class="cau-hoi" id="cau19">
+          <div class="cau-hoi-title"><span class="q-num">Question 19:</span> Điền vào chỗ trống số (19):</div>
+          <div class="options-grid">
+            <label class="option-label"><input type="radio" name="q19" value="A"> A. boring</label>
+            <label class="option-label"><input type="radio" name="q19" value="B"> B. caring</label>
+            <label class="option-label"><input type="radio" name="q19" value="C"> C. shy</label>
+            <label class="option-label"><input type="radio" name="q19" value="D"> D. careless</label>
+          </div>
+        </div>
+
+        <div class="cau-hoi" id="cau20">
+          <div class="cau-hoi-title"><span class="q-num">Question 20:</span> Điền vào chỗ trống số (20):</div>
+          <div class="options-grid">
+            <label class="option-label"><input type="radio" name="q20" value="A"> A. canteen</label>
+            <label class="option-label"><input type="radio" name="q20" value="B"> B. library</label>
+            <label class="option-label"><input type="radio" name="q20" value="C"> C. attic</label>
+            <label class="option-label"><input type="radio" name="q20" value="D"> D. balcony</label>
+          </div>
+        </div>
+
+        <div class="cau-hoi" id="cau21">
+          <div class="cau-hoi-title"><span class="q-num">Question 21:</span> Điền vào chỗ trống số (21):</div>
+          <div class="options-grid">
+            <label class="option-label"><input type="radio" name="q21" value="A"> A. go</label>
+            <label class="option-label"><input type="radio" name="q21" value="B"> B. goes</label>
+            <label class="option-label"><input type="radio" name="q21" value="C"> C. are going</label>
+            <label class="option-label"><input type="radio" name="q21" value="D"> D. went</label>
+          </div>
+        </div>
+
+        <div class="cau-hoi" id="cau22">
+          <div class="cau-hoi-title"><span class="q-num">Question 22:</span> Điền vào chỗ trống số (22):</div>
+          <div class="options-grid">
+            <label class="option-label"><input type="radio" name="q22" value="A"> A. house</label>
+            <label class="option-label"><input type="radio" name="q22" value="B"> B. room</label>
+            <label class="option-label"><input type="radio" name="q22" value="C"> C. place</label>
+            <label class="option-label"><input type="radio" name="q22" value="D"> D. city</label>
+          </div>
+        </div>
+
+        <div class="sub-section-title">IX. Read the passage and choose the correct answer to each question.</div>
+
+        <div class="passage-box">
+          Hello everyone! My name is Nam and I live with my parents and younger sister in a modern apartment in Can Tho City. Our apartment is on the eighth floor of a high building. It is not very big, but it is bright, clean, and extremely comfortable.<br><br>
+          There are five rooms in our apartment: a living room, two cozy bedrooms, a modern kitchen, and a clean bathroom. The living room is the largest room in the house. There is a soft grey sofa, a small wooden coffee table, and a big television on the wall. Behind the sofa, my mother hangs a beautiful picture of Ninh Kieu Wharf. We love sitting together in the living room every evening to talk about our day.<br><br>
+          My favourite place is my bedroom. I share it with my sister. There is a bunk bed near the window. Next to the bed, there are two study desks and a white bookshelf full of comic books and school textbooks. Our apartment also has a small balcony where my father grows lots of green plants and roses. From the balcony, I can see the beautiful Hau River and peaceful boats moving in the morning sun.
+        </div>
+
+        <div class="cau-hoi" id="cau23">
+          <div class="cau-hoi-title"><span class="q-num">Question 23.</span> What is the main topic of the passage?</div>
+          <div class="options-grid">
+            <label class="option-label"><input type="radio" name="q23" value="A"> A. Nam's new secondary school</label>
+            <label class="option-label"><input type="radio" name="q23" value="B"> B. Nam's modern apartment in Can Tho City</label>
+            <label class="option-label"><input type="radio" name="q23" value="C"> C. Nam's daily routine with his sister</label>
+            <label class="option-label"><input type="radio" name="q23" value="D"> D. Sightseeing at Ninh Kieu Wharf</label>
+          </div>
+        </div>
+
+        <div class="cau-hoi" id="cau24">
+          <div class="cau-hoi-title"><span class="q-num">Question 24.</span> Which floor is Nam's apartment on?</div>
+          <div class="options-grid">
+            <label class="option-label"><input type="radio" name="q24" value="A"> A. On the fifth floor</label>
+            <label class="option-label"><input type="radio" name="q24" value="B"> B. On the eighth floor</label>
+            <label class="option-label"><input type="radio" name="q24" value="C"> C. On the seventh floor</label>
+            <label class="option-label"><input type="radio" name="q24" value="D"> D. On the tenth floor</label>
+          </div>
+        </div>
+
+        <div class="cau-hoi" id="cau25">
+          <div class="cau-hoi-title"><span class="q-num">Question 25.</span> Where is the picture of Ninh Kieu Wharf located?</div>
+          <div class="options-grid">
+            <label class="option-label"><input type="radio" name="q25" value="A"> A. Under the small table</label>
+            <label class="option-label"><input type="radio" name="q25" value="B"> B. Near the window in the bedroom</label>
+            <label class="option-label"><input type="radio" name="q25" value="C"> C. Behind the sofa in the living room</label>
+            <label class="option-label"><input type="radio" name="q25" value="D"> D. On the balcony</label>
+          </div>
+        </div>
+
+        <div class="cau-hoi" id="cau26">
+          <div class="cau-hoi-title"><span class="q-num">Question 26.</span> The word 'cozy' in paragraph 2 is closest in meaning to:</div>
+          <div class="options-grid">
+            <label class="option-label"><input type="radio" name="q26" value="A"> A. warm and comfortable</label>
+            <label class="option-label"><input type="radio" name="q26" value="B"> B. cold and noisy</label>
+            <label class="option-label"><input type="radio" name="q26" value="C"> C. dirty and dark</label>
+            <label class="option-label"><input type="radio" name="q26" value="D"> D. empty and narrow</label>
+          </div>
+        </div>
+
+        <div class="cau-hoi" id="cau27">
+          <div class="cau-hoi-title"><span class="q-num">Question 27.</span> The word 'It' in paragraph 1 refers to:</div>
+          <div class="options-grid">
+            <label class="option-label"><input type="radio" name="q27" value="A"> A. Can Tho City</label>
+            <label class="option-label"><input type="radio" name="q27" value="B"> B. The high building</label>
+            <label class="option-label"><input type="radio" name="q27" value="C"> C. Our apartment</label>
+            <label class="option-label"><input type="radio" name="q27" value="D"> D. The eighth floor</label>
+          </div>
+        </div>
+
+        <div class="cau-hoi" id="cau28">
+          <div class="cau-hoi-title"><span class="q-num">Question 28.</span> Which of the following is NOT true according to the passage?</div>
+          <div class="options-grid">
+            <label class="option-label"><input type="radio" name="q28" value="A"> A. There are five rooms in Nam's apartment.</label>
+            <label class="option-label"><input type="radio" name="q28" value="B"> B. Nam has his own private bedroom without sharing.</label>
+            <label class="option-label"><input type="radio" name="q28" value="C"> C. Nam's father grows flowers and green plants on the balcony.</label>
+            <label class="option-label"><input type="radio" name="q28" value="D"> D. From the balcony, Nam can see the Hau River.</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== PHẦN 4: KỸ NĂNG VIẾT - TRẮC NGHIỆM HÓA (CÂU 29 - 40) ==================== -->
+    <div class="part-card">
+      <div class="part-header">Phần 4: Kỹ Năng Viết - Trắc Nghiệm Hóa (Writing Mastery)</div>
+      <div class="part-body">
+        <div class="sub-section-title">X. Word Formation (Biến đổi dạng từ đúng trong ngoặc)</div>
+
+        <div class="cau-hoi" id="cau29">
+          <div class="cau-hoi-title"><span class="q-num">Question 29.</span> My new classmate, Linh, is very ________ and always smiles at everyone. (FRIEND)</div>
+          <div class="options-grid">
+            <label class="option-label"><input type="radio" name="q29" value="A"> A. friendship</label>
+            <label class="option-label"><input type="radio" name="q29" value="B"> B. friendly</label>
+            <label class="option-label"><input type="radio" name="q29" value="C"> C. friendliness</label>
+            <label class="option-label"><input type="radio" name="q29" value="D"> D. friendless</label>
+          </div>
+        </div>
+
+        <div class="cau-hoi" id="cau30">
+          <div class="cau-hoi-title"><span class="q-num">Question 30.</span> Our school library has a lot of ________ reference books and magazines. (USE)</div>
+          <div class="options-grid">
+            <label class="option-label"><input type="radio" name="q30" value="A"> A. usefully</label>
+            <label class="option-label"><input type="radio" name="q30" value="B"> B. uselessly</label>
+            <label class="option-label"><input type="radio" name="q30" value="C"> C. useful</label>
+            <label class="option-label"><input type="radio" name="q30" value="D"> D. usefulness</label>
+          </div>
+        </div>
+
+        <div class="cau-hoi" id="cau31">
+          <div class="cau-hoi-title"><span class="q-num">Question 31.</span> There are many modern ________ in our school science laboratory. (EQUIP)</div>
+          <div class="options-grid">
+            <label class="option-label"><input type="radio" name="q31" value="A"> A. equipment</label>
+            <label class="option-label"><input type="radio" name="q31" value="B"> B. equipments</label>
+            <label class="option-label"><input type="radio" name="q31" value="C"> C. equipped</label>
+            <label class="option-label"><input type="radio" name="q31" value="D"> D. equipping</label>
+          </div>
+        </div>
+
+        <div class="cau-hoi" id="cau32">
+          <div class="cau-hoi-title"><span class="q-num">Question 32.</span> She draws very well; she is one of the most ________ students in my class. (CREATE)</div>
+          <div class="options-grid">
+            <label class="option-label"><input type="radio" name="q32" value="A"> A. creation</label>
+            <label class="option-label"><input type="radio" name="q32" value="B"> B. creatively</label>
+            <label class="option-label"><input type="radio" name="q32" value="C"> C. creativity</label>
+            <label class="option-label"><input type="radio" name="q32" value="D"> D. creative</label>
+          </div>
+        </div>
+
+        <div class="sub-section-title">XI. Sentence Transformation (Viết lại câu tương đương nghĩa)</div>
+
+        <div class="cau-hoi" id="cau33">
+          <div class="cau-hoi-title"><span class="q-num">Question 33.</span> Chọn câu viết lại đúng nghĩa cho: <em>"My house has four bedrooms and a large garden."</em></div>
+          <div class="options-grid">
+            <label class="option-label"><input type="radio" name="q33" value="A"> A. There are four bedrooms and a large garden in my house.</label>
+            <label class="option-label"><input type="radio" name="q33" value="B"> B. There is four bedrooms and a large garden in my house.</label>
+            <label class="option-label"><input type="radio" name="q33" value="C"> C. There are four bedrooms and a large garden of my house.</label>
+            <label class="option-label"><input type="radio" name="q33" value="D"> D. There are four bedrooms and a large garden on my house.</label>
+          </div>
+        </div>
+
+        <div class="cau-hoi" id="cau34">
+          <div class="cau-hoi-title"><span class="q-num">Question 34.</span> Chọn câu viết lại đúng nghĩa cho: <em>"What is your favourite subject at school?"</em></div>
+          <div class="options-grid">
+            <label class="option-label"><input type="radio" name="q34" value="A"> A. What subject do you like most best at school?</label>
+            <label class="option-label"><input type="radio" name="q34" value="B"> B. What subject do you like best at school?</label>
+            <label class="option-label"><input type="radio" name="q34" value="C"> C. What subject do you favourite at school?</label>
+            <label class="option-label"><input type="radio" name="q34" value="D"> D. What subject do you like better at school?</label>
+          </div>
+        </div>
+
+        <div class="cau-hoi" id="cau35">
+          <div class="cau-hoi-title"><span class="q-num">Question 35.</span> Chọn câu viết lại đúng nghĩa cho: <em>"The dog is sleeping in front of the armchair."</em></div>
+          <div class="options-grid">
+            <label class="option-label"><input type="radio" name="q35" value="A"> A. The armchair is next to the dog.</label>
+            <label class="option-label"><input type="radio" name="q35" value="B"> B. The armchair is under the dog.</label>
+            <label class="option-label"><input type="radio" name="q35" value="C"> C. The armchair is behind the dog.</label>
+            <label class="option-label"><input type="radio" name="q35" value="D"> D. The armchair is opposite with the dog.</label>
+          </div>
+        </div>
+
+        <div class="cau-hoi" id="cau36">
+          <div class="cau-hoi-title"><span class="q-num">Question 36.</span> Chọn câu viết lại đúng nghĩa cho: <em>"Hoa has long black hair and big brown eyes."</em></div>
+          <div class="options-grid">
+            <label class="option-label"><input type="radio" name="q36" value="A"> A. Hoa's hair are long and black, and her eyes is big and brown.</label>
+            <label class="option-label"><input type="radio" name="q36" value="B"> B. Hoa's hair is long and black, and her eyes are big and brown.</label>
+            <label class="option-label"><input type="radio" name="q36" value="C"> C. Hoa's hair has long and black, and her eyes have big and brown.</label>
+            <label class="option-label"><input type="radio" name="q36" value="D"> D. Hoa's hair is long black, and her eyes is big brown.</label>
+          </div>
+        </div>
+
+        <div class="sub-section-title">XII. Sentence Building (Dựng câu hoàn chỉnh từ từ gợi ý)</div>
+
+        <div class="cau-hoi" id="cau37">
+          <div class="cau-hoi-title"><span class="q-num">Question 37.</span> Dựng câu hoàn chỉnh: <em>Look! / the / boys / play / football / in / the / schoolyard / now.</em></div>
+          <div class="options-grid">
+            <label class="option-label"><input type="radio" name="q37" value="A"> A. Look! The boys is playing football in the schoolyard now.</label>
+            <label class="option-label"><input type="radio" name="q37" value="B"> B. Look! The boys are playing football in the schoolyard now.</label>
+            <label class="option-label"><input type="radio" name="q37" value="C"> C. Look! The boys play football in the schoolyard now.</label>
+            <label class="option-label"><input type="radio" name="q37" value="D"> D. Look! The boys are play football in the schoolyard now.</label>
+          </div>
+        </div>
+
+        <div class="cau-hoi" id="cau38">
+          <div class="cau-hoi-title"><span class="q-num">Question 38.</span> Dựng câu hoàn chỉnh: <em>There / be / a / desk / and / two / chairs / my / bedroom.</em></div>
+          <div class="options-grid">
+            <label class="option-label"><input type="radio" name="q38" value="A"> A. There are a desk and two chairs in my bedroom.</label>
+            <label class="option-label"><input type="radio" name="q38" value="B"> B. There is a desk and two chairs on my bedroom.</label>
+            <label class="option-label"><input type="radio" name="q38" value="C"> C. There is a desk and two chairs in my bedroom.</label>
+            <label class="option-label"><input type="radio" name="q38" value="D"> D. There be a desk and two chairs in my bedroom.</label>
+          </div>
+        </div>
+
+        <div class="cau-hoi" id="cau39">
+          <div class="cau-hoi-title"><span class="q-num">Question 39.</span> Dựng câu hoàn chỉnh: <em>My / brother / usually / do / his / homework / after / dinner.</em></div>
+          <div class="options-grid">
+            <label class="option-label"><input type="radio" name="q39" value="A"> A. My brother usually do his homework after dinner.</label>
+            <label class="option-label"><input type="radio" name="q39" value="B"> B. My brother does usually his homework after dinner.</label>
+            <label class="option-label"><input type="radio" name="q39" value="C"> C. My brother is usually doing his homework after dinner.</label>
+            <label class="option-label"><input type="radio" name="q39" value="D"> D. My brother usually does his homework after dinner.</label>
+          </div>
+        </div>
+
+        <div class="cau-hoi" id="cau40">
+          <div class="cau-hoi-title"><span class="q-num">Question 40.</span> Dựng câu hoàn chỉnh: <em>Lan / have / oval / face / and / round / black / eyes.</em></div>
+          <div class="options-grid">
+            <label class="option-label"><input type="radio" name="q40" value="A"> A. Lan has a oval face and round black eyes.</label>
+            <label class="option-label"><input type="radio" name="q40" value="B"> B. Lan has an oval face and round black eyes.</label>
+            <label class="option-label"><input type="radio" name="q40" value="C"> C. Lan is having an oval face and round black eyes.</label>
+            <label class="option-label"><input type="radio" name="q40" value="D"> D. Lan have an oval face and round black eyes.</label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="submit-container">
+    <button id="btnNopBai" onclick="nopBai()">Nộp Bài Thi</button>
+  </div>
+</div>
+
+<script>
+  function nopBai() {
+    var dapAnDung = {
+      q1: "D", q2: "D", q3: "D", q4: "B",
+      q5: "B", q6: "A", q7: "C", q8: "B", q9: "B", q10: "B",
+      q11: "A", q12: "B", q13: "A", q14: "B", q15: "A", q16: "B",
+      q17: "A", q18: "B", q19: "B", q20: "B", q21: "A", q22: "C",
+      q23: "B", q24: "B", q25: "C", q26: "A", q27: "C", q28: "B",
+      q29: "B", q30: "C", q31: "A", q32: "D",
+      q33: "A", q34: "B", q35: "C", q36: "B",
+      q37: "B", q38: "C", q39: "D", q40: "B"
+    };
+
+    var ten = document.getElementById("tenHocSinh").value;
+    var lop = document.getElementById("lopHoc").value;
+
+    if (ten.trim() === "") {
+      alert("Vui lòng nhập họ và tên trước khi nộp bài!");
+      document.getElementById("tenHocSinh").focus();
+      return;
+    }
+
+    var tongSoCau = Object.keys(dapAnDung).length;
+    var soCauDung = 0;
+
+    for (var q in dapAnDung) {
+      var selected = document.querySelector('input[name="' + q + '"]:checked');
+      if (selected && selected.value === dapAnDung[q]) {
+        soCauDung++;
+      }
+    }
+
+    // Thang điểm 10: 40 câu x 0.25 điểm = 10.0 điểm
+    var diem = parseFloat((soCauDung * 0.25).toFixed(2));
+
+    var url = "https://script.google.com/macros/s/AKfycbywF3afxl8E2_c8cKkfPC7FjLO-2kTFIlcSgJftZT4dyRraswwPlZ8zcFw725S4Mwx_/exec";
+
+    var btn = document.getElementById("btnNopBai");
+    btn.disabled = true;
+    btn.innerText = "Đang gửi dữ liệu...";
+
+    fetch(url, {
+      method: 'POST',
+      headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+      body: JSON.stringify({ tenHocSinh: ten, lopHoc: lop, diemSo: diem })
+    })
+    .then(function(r) {
+      alert("Nộp bài thành công!\n- Họ và tên: " + ten + " (" + lop + ")\n- Kết quả: " + soCauDung + "/" + tongSoCau + " câu đúng\n- Điểm số: " + diem + "/10\nĐiểm của em đã được gửi về hệ thống của Thầy Sơn.");
+      btn.innerText = "Đã Nộp Thành Công";
+    })
+    .catch(function(err) {
+      alert("Có lỗi xảy ra khi gửi điểm, vui lòng thử lại!");
+      btn.disabled = false;
+      btn.innerText = "Nộp Bài Thi";
+    });
+  }
+</script>
+
+</body>
+</html>
