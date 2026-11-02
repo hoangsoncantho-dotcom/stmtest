@@ -1,0 +1,2095 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ĐỀ 09 (MÃ ĐỀ: 909) — KIỂM TRA ĐÁNH GIÁ NĂNG LỰC GIỮA KỲ 1 TIẾNG ANH 9</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0d9488;
+      --primary-dark: #0f766e;
+      --primary-light: #ccfbf1;
+      --secondary: #0f172a;
+      --accent: #dc2626;
+      --success: #16a34a;
+      --warning: #f59e0b;
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --border: #e2e8f0;
+      --text: #1e293b;
+      --text-muted: #64748b;
+      --radius: 14px;
+      --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.07), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+      --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding-bottom: 90px;
+    }
+
+    /* Top Sticky Header */
+    .top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: var(--shadow);
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .brand-logo {
+      width: 42px;
+      height: 42px;
+      background: linear-gradient(135deg, var(--primary), #059669);
+      color: white;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 18px;
+      letter-spacing: 0.5px;
+    }
+    .brand-info h2 {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--secondary);
+      line-height: 1.2;
+    }
+    .brand-info p {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+    .timer-badge {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: #fef2f2;
+      border: 1.5px solid #fecaca;
+      color: var(--accent);
+      padding: 8px 16px;
+      border-radius: 30px;
+      font-weight: 700;
+      font-size: 16px;
+      font-family: 'Lexend', monospace;
+    }
+    .timer-badge.warning {
+      background: #fef3c7;
+      border-color: #fde68a;
+      color: #b45309;
+      animation: pulse 1s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.04); }
+    }
+
+    /* Container */
+    .container {
+      max-width: 900px;
+      margin: 24px auto;
+      padding: 0 20px;
+    }
+
+    /* Hero Card */
+    .hero-card {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      color: white;
+      padding: 32px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-lg);
+      margin-bottom: 24px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-card::after {
+      content: "";
+      position: absolute;
+      top: -40px;
+      right: -40px;
+      width: 180px;
+      height: 180px;
+      background: radial-gradient(circle, rgba(13,148,136,0.3) 0%, rgba(0,0,0,0) 70%);
+      border-radius: 50%;
+    }
+    .hero-tag {
+      display: inline-block;
+      background: rgba(13, 148, 136, 0.25);
+      border: 1px solid var(--primary);
+      color: #5eead4;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 20px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 12px;
+    }
+    .hero-title {
+      font-size: 24px;
+      font-weight: 800;
+      margin-bottom: 8px;
+      line-height: 1.3;
+    }
+    .hero-desc {
+      font-size: 13.5px;
+      color: #cbd5e1;
+      margin-bottom: 20px;
+      max-width: 700px;
+    }
+
+    /* Student Info Form */
+    .student-form {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      padding: 16px 20px;
+      border-radius: 12px;
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 16px;
+    }
+    .form-group label {
+      display: block;
+      font-size: 12px;
+      font-weight: 600;
+      color: #94a3b8;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .form-group input, .form-group select {
+      width: 100%;
+      padding: 10px 14px;
+      background: rgba(255, 255, 255, 0.95);
+      border: 1px solid transparent;
+      border-radius: 8px;
+      font-size: 14.5px;
+      color: var(--secondary);
+      font-weight: 600;
+      outline: none;
+      transition: all 0.2s;
+    }
+    .form-group input:focus, .form-group select:focus {
+      background: #ffffff;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.3);
+    }
+
+    /* Section Header */
+    .section-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 28px 0 14px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--border);
+    }
+    .section-title {
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--primary-dark);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .section-badge {
+      font-size: 12px;
+      font-weight: 700;
+      background: var(--primary-light);
+      color: var(--primary-dark);
+      padding: 4px 10px;
+      border-radius: 20px;
+    }
+
+    /* Audio Player Card */
+    .audio-card {
+      background: #ffffff;
+      border: 1.5px solid #cbd5e1;
+      border-left: 5px solid var(--primary);
+      border-radius: var(--radius);
+      padding: 18px 20px;
+      margin-bottom: 20px;
+      box-shadow: var(--shadow);
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+    .audio-icon {
+      font-size: 32px;
+      color: var(--primary);
+    }
+    .audio-content {
+      flex-grow: 1;
+    }
+    .audio-content h4 {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--secondary);
+      margin-bottom: 4px;
+    }
+    .audio-content p {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+    }
+    audio {
+      width: 100%;
+      height: 40px;
+      outline: none;
+      border-radius: 20px;
+    }
+
+    /* Passage Box */
+    .passage-box {
+      background: #f8fafc;
+      border: 1.5px solid var(--border);
+      border-left: 4px solid var(--secondary);
+      border-radius: var(--radius);
+      padding: 20px 24px;
+      margin-bottom: 20px;
+      font-size: 14.5px;
+      line-height: 1.7;
+      color: #334155;
+    }
+
+    /* Notice Box */
+    .notice-box {
+      background: #fffbeb;
+      border: 2px dashed #f59e0b;
+      border-radius: 12px;
+      padding: 16px 20px;
+      margin-bottom: 14px;
+      text-align: center;
+      font-size: 14px;
+      color: #78350f;
+      line-height: 1.6;
+    }
+
+    /* Question Card */
+    .q-card {
+      background: var(--card-bg);
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius);
+      padding: 22px 24px;
+      margin-bottom: 18px;
+      box-shadow: var(--shadow);
+      transition: all 0.2s;
+    }
+    .q-card:hover {
+      border-color: #cbd5e1;
+      box-shadow: 0 6px 12px -2px rgb(0 0 0 / 0.08);
+    }
+    .q-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+    .q-num {
+      background: var(--secondary);
+      color: white;
+      font-size: 12px;
+      font-weight: 800;
+      padding: 4px 10px;
+      border-radius: 6px;
+      flex-shrink: 0;
+    }
+    .q-text {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--secondary);
+      line-height: 1.5;
+      flex-grow: 1;
+    }
+    .arrangement-box {
+      margin-top: 10px;
+      padding: 12px 16px;
+      background: #f8fafc;
+      border: 1.5px solid #cbd5e1;
+      border-left: 4px solid var(--primary);
+      border-radius: 8px;
+      font-weight: 500;
+      color: #334155;
+      font-size: 14.5px;
+      line-height: 1.6;
+    }
+    .arr-item {
+      margin-bottom: 5px;
+    }
+    .arr-item:last-child {
+      margin-bottom: 0;
+    }
+    .arr-item b {
+      color: var(--primary-dark);
+      font-weight: 700;
+      margin-right: 6px;
+    }
+
+    /* Option Grid */
+    .options-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+    .option-label {
+      display: flex;
+      align-items: center;
+      padding: 12px 16px;
+      background: #f8fafc;
+      border: 1.5px solid var(--border);
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 14.5px;
+      transition: all 0.15s ease-in-out;
+      user-select: none;
+    }
+    .option-label:hover {
+      background: #f1f5f9;
+      border-color: #94a3b8;
+    }
+    .option-label input[type="radio"] {
+      margin-right: 12px;
+      width: 18px;
+      height: 18px;
+      accent-color: var(--primary);
+    }
+    .option-label.selected {
+      background: #f0fdfa;
+      border-color: var(--primary);
+      color: var(--primary-dark);
+      font-weight: 600;
+    }
+
+    /* Review Mode Classes */
+    .q-card.correct {
+      border-color: var(--success);
+      background: #f0fdf4;
+    }
+    .q-card.incorrect {
+      border-color: var(--accent);
+      background: #fef2f2;
+    }
+    .option-label.is-correct {
+      background: #dcfce7 !important;
+      border-color: var(--success) !important;
+      color: #14532d !important;
+      font-weight: 700 !important;
+    }
+    .option-label.is-wrong {
+      background: #fee2e2 !important;
+      border-color: var(--accent) !important;
+      color: #7f1d1d !important;
+      text-decoration: line-through;
+    }
+    .explanation-box {
+      margin-top: 14px;
+      padding: 12px 16px;
+      background: white;
+      border-radius: 8px;
+      border: 1px solid #e2e8f0;
+      font-size: 13.5px;
+      color: var(--secondary);
+      display: none;
+      line-height: 1.6;
+    }
+    .explanation-box.show {
+      display: block;
+    }
+    .exp-title {
+      font-weight: 700;
+      color: var(--primary-dark);
+      margin-bottom: 4px;
+    }
+
+    /* Floating Submit Bar */
+    .submit-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(10px);
+      border-top: 1px solid var(--border);
+      padding: 14px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.05);
+      z-index: 99;
+    }
+    .progress-info {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--secondary);
+    }
+    .progress-bar-container {
+      width: 220px;
+      height: 8px;
+      background: #e2e8f0;
+      border-radius: 4px;
+      margin-top: 6px;
+      overflow: hidden;
+    }
+    .progress-bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--primary), #059669);
+      width: 0%;
+      transition: width 0.3s;
+    }
+    .btn-submit {
+      background: linear-gradient(135deg, var(--primary), #059669);
+      color: white;
+      border: none;
+      padding: 12px 28px;
+      border-radius: 30px;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(13, 148, 136, 0.3);
+      transition: all 0.2s;
+    }
+    .btn-submit:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 14px rgba(13, 148, 136, 0.4);
+    }
+
+    /* Result Modal */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(15, 23, 42, 0.7);
+      backdrop-filter: blur(6px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.3s;
+    }
+    .modal-overlay.open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .modal-card {
+      background: white;
+      width: 90%;
+      max-width: 480px;
+      border-radius: 20px;
+      padding: 32px 28px;
+      text-align: center;
+      box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.2);
+      transform: scale(0.9);
+      transition: transform 0.3s;
+    }
+    .modal-overlay.open .modal-card {
+      transform: scale(1);
+    }
+    .score-circle {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #0d9488 0%, #059669 100%);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 18px;
+      box-shadow: 0 10px 20px rgba(13, 148, 136, 0.3);
+    }
+    .score-big {
+      font-size: 38px;
+      font-weight: 800;
+      line-height: 1;
+      font-family: 'Lexend', sans-serif;
+    }
+    .score-sub {
+      font-size: 12px;
+      font-weight: 600;
+      opacity: 0.9;
+    }
+    .modal-title {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--secondary);
+      margin-bottom: 6px;
+    }
+    .modal-greeting {
+      font-size: 14.5px;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 24px;
+      text-align: left;
+    }
+    .stat-item {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      padding: 12px;
+      border-radius: 10px;
+    }
+    .stat-label {
+      font-size: 11.5px;
+      color: var(--text-muted);
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+    .stat-val {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--secondary);
+    }
+    .btn-review {
+      background: var(--secondary);
+      color: white;
+      border: none;
+      width: 100%;
+      padding: 12px;
+      border-radius: 10px;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .btn-review:hover {
+      background: #334155;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Sticky Navigation Bar -->
+  <header class="top-bar">
+    <div class="brand">
+      <div class="brand-logo">STM</div>
+      <div class="brand-info">
+        <h2>Trung tâm Anh ngữ STM</h2>
+        <p>Đề 09 — Mã Đề: 909 • 40 Câu Chuẩn Cần Thơ</p>
+      </div>
+    </div>
+    <div class="timer-badge" id="timerBadge">
+      <span>⏱</span>
+      <span id="timerDisplay">60:00</span>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="container">
+    <!-- Hero Dark Card -->
+    <section class="hero-card">
+      <div class="hero-tag">BÀI THI TRẮC NGHIỆM TRỰC TUYẾN</div>
+      <h1 class="hero-title">ĐỀ SỐ 09 (MÃ ĐỀ: 909) — TIẾNG ANH 9</h1>
+      <p class="hero-desc">
+        Đề thi thử giữa học kỳ 1 bám sát chương trình GDPT 2018 (Global Success). Cấu trúc 40 câu hỏi phân hóa 4 kỹ năng chuẩn Sở GD&ĐT Cần Thơ. Thời gian làm bài: 60 phút.
+      </p>
+
+      <div class="student-form">
+        <div class="form-group">
+          <label for="studentName">Họ và Tên Học Sinh (*)</label>
+          <input type="text" id="studentName" placeholder="Ví dụ: Nguyễn Văn An" autocomplete="name" required>
+        </div>
+        <div class="form-group">
+          <label for="studentClass">Lớp Học</label>
+          <select id="studentClass">
+            <option value="9A1">Lớp 9A1</option>
+            <option value="9A2">Lớp 9A2</option>
+            <option value="9A3">Lớp 9A3</option>
+            <option value="9A4">Lớp 9A4</option>
+            <option value="9A5">Lớp 9A5</option>
+            <option value="E9" selected>Lớp E9 (STM)</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <!-- Questions Container -->
+    <div id="questionsContainer"></div>
+  </main>
+
+  <!-- Floating Bottom Submit Bar -->
+  <div class="submit-bar">
+    <div class="progress-wrap">
+      <div class="progress-info" id="progressText">Đã trả lời: 0 / 40 câu</div>
+      <div class="progress-bar-container">
+        <div class="progress-bar-fill" id="progressBar"></div>
+      </div>
+    </div>
+    <button class="btn-submit" id="submitBtn" onclick="submitExam()">NỘP BÀI THI</button>
+  </div>
+
+  <!-- Score Modal -->
+  <div class="modal-overlay" id="scoreModal">
+    <div class="modal-card">
+      <div class="score-circle">
+        <div class="score-big" id="modalScore">0.0</div>
+        <div class="score-sub">TRÊN 10.0</div>
+      </div>
+      <h3 class="modal-title">KẾT QUẢ ĐÁNH GIÁ</h3>
+      <p class="modal-greeting" id="modalGreeting">Chúc mừng em!</p>
+
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-label">Số câu đúng</div>
+          <div class="stat-val" id="statCorrect">0 / 40 câu</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">Tỷ lệ chính xác</div>
+          <div class="stat-val" id="statPercent">0%</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">Thời gian làm bài</div>
+          <div class="stat-val" id="statTime">0 phút</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">Xếp loại năng lực</div>
+          <div class="stat-val" id="statRank">Khá</div>
+        </div>
+      </div>
+
+      <button class="btn-review" onclick="closeModalAndReview()">XEM LỜI GIẢI CHI TIẾT</button>
+    </div>
+  </div>
+
+  <script>
+    const QUESTIONS_DATA = [
+  {
+    "id": 1,
+    "section": "PHẦN I: LISTENING (NGHE HIỂU)",
+    "sectionBadge": "Part 1. Conversation",
+    "question": "What unique type of paper is exclusively used to print Dong Ho folk paintings?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Heavy recycled cardboard imported from Europe"
+      },
+      {
+        "key": "B",
+        "text": "Glossy photographic paper with plastic coating"
+      },
+      {
+        "key": "C",
+        "text": "Do paper coated with sparkling scallop shell powder"
+      },
+      {
+        "key": "D",
+        "text": "Thin woven bamboo paper dyed in river mud"
+      }
+    ],
+    "correct": "C",
+    "explanation": "Chọn C — Dẫn chứng Track 1: Tham khảo audio script chi tiết của bài nghe 1.",
+    "audioTrack": {
+      "file": "09_De_09_Track_1_Dong_Ho_Folk_Art.mp3",
+      "title": "BÀI NGHE 1: CONVERSATION (TRACK 1)",
+      "desc": "Part 1. Listen to a conversation between Kien and Mai about their weekend experience at Dong Ho Folk Painting Village. Choose the correct answer A, B, C, or D for questions 1 to 4. You will hear the recording twice. (Em được nghe 2 lần)."
+    }
+  },
+  {
+    "id": 2,
+    "section": "PHẦN I: LISTENING (NGHE HIỂU)",
+    "sectionBadge": "Part 1. Conversation",
+    "question": "Where do artisans source the completely natural colors for the paintings?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Plants, tree leaves, charred bamboo ashes, and brick gravel"
+      },
+      {
+        "key": "B",
+        "text": "Chemical oil paints purchased from modern supermarkets"
+      },
+      {
+        "key": "C",
+        "text": "Synthetic ink powder mixed with distilled water"
+      },
+      {
+        "key": "D",
+        "text": "Metallic spray paint cans from industrial factories"
+      }
+    ],
+    "correct": "A",
+    "explanation": "Chọn A — Dẫn chứng Track 1: Tham khảo audio script chi tiết của bài nghe 1."
+  },
+  {
+    "id": 3,
+    "section": "PHẦN I: LISTENING (NGHE HIỂU)",
+    "sectionBadge": "Part 1. Conversation",
+    "question": "How is a Dong Ho painting created by craftsmen?",
+    "options": [
+      {
+        "key": "A",
+        "text": "By sketching with black ballpoint pens on canvas"
+      },
+      {
+        "key": "B",
+        "text": "By pressing carved wooden woodblocks one by one onto the paper"
+      },
+      {
+        "key": "C",
+        "text": "By using modern digital color printers connected to computers"
+      },
+      {
+        "key": "D",
+        "text": "By weaving colored silk threads on ancient handlooms"
+      }
+    ],
+    "correct": "B",
+    "explanation": "Chọn B — Dẫn chứng Track 1: Tham khảo audio script chi tiết của bài nghe 1."
+  },
+  {
+    "id": 4,
+    "section": "PHẦN I: LISTENING (NGHE HIỂU)",
+    "sectionBadge": "Part 1. Conversation",
+    "question": "What classic painting did Kien buy to wish his family prosperity for the New Year?",
+    "options": [
+      {
+        "key": "A",
+        "text": "A landscape painting of modern city skyscrapers"
+      },
+      {
+        "key": "B",
+        "text": "A portrait of a foreign historic leader"
+      },
+      {
+        "key": "C",
+        "text": "An abstract picture of sea creatures"
+      },
+      {
+        "key": "D",
+        "text": "The painting of a plump rooster symbolizing good fortune"
+      }
+    ],
+    "correct": "D",
+    "explanation": "Chọn D — Dẫn chứng Track 1: Tham khảo audio script chi tiết của bài nghe 1."
+  },
+  {
+    "id": 5,
+    "section": "PHẦN I: LISTENING (NGHE HIỂU)",
+    "sectionBadge": "Part 2. Interview / Talk",
+    "question": "Why is Phuc feeling distressed and isolated among his classmates?",
+    "options": [
+      {
+        "key": "A",
+        "text": "His friends urge him to buy expensive designer clothes to fit in"
+      },
+      {
+        "key": "B",
+        "text": "His teacher gave him too many math exercises to finish"
+      },
+      {
+        "key": "C",
+        "text": "His parents forbid him from playing badminton on weekends"
+      },
+      {
+        "key": "D",
+        "text": "He lost his library card and cannot borrow science books"
+      }
+    ],
+    "correct": "A",
+    "explanation": "Chọn A — Dẫn chứng Track 2: Tham khảo audio script chi tiết của bài nghe 2.",
+    "audioTrack": {
+      "file": "09_De_09_Track_2_Navigating_Peer_Pressure.mp3",
+      "title": "BÀI NGHE 2: INTERVIEW / TALK (TRACK 2)",
+      "desc": "Part 2. Listen to a conversation between a school psychologist (Dr. Ha) and a Grade 9 student (Phuc) about navigating peer pressure. Choose the correct answer A, B, C, or D for questions 5 to 8. You will hear the recording twice. (Em được nghe 2 lần)."
+    }
+  },
+  {
+    "id": 6,
+    "section": "PHẦN I: LISTENING (NGHE HIỂU)",
+    "sectionBadge": "Part 2. Interview / Talk",
+    "question": "According to Dr. Ha, why do teenagers frequently succumb to negative peer pressure?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Because designer clothes make students study mathematics faster"
+      },
+      {
+        "key": "B",
+        "text": "Because school regulations require wearing branded shoes"
+      },
+      {
+        "key": "C",
+        "text": "Because their parents encourage them to copy friends blindly"
+      },
+      {
+        "key": "D",
+        "text": "Because of the subconscious fear of being rejected or ridiculed"
+      }
+    ],
+    "correct": "D",
+    "explanation": "Chọn D — Dẫn chứng Track 2: Tham khảo audio script chi tiết của bài nghe 2."
+  },
+  {
+    "id": 7,
+    "section": "PHẦN I: LISTENING (NGHE HIỂU)",
+    "sectionBadge": "Part 2. Interview / Talk",
+    "question": "What practical advice does Dr. Ha offer when Phuc's friends make unreasonable demands?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Borrow large sums of money from strangers to purchase luxury items"
+      },
+      {
+        "key": "B",
+        "text": "Stop attending school completely for the rest of the semester"
+      },
+      {
+        "key": "C",
+        "text": "Learn to assertively say 'No' with calm confidence and respect"
+      },
+      {
+        "key": "D",
+        "text": "Pick a physical fight with his classmates during recess"
+      }
+    ],
+    "correct": "C",
+    "explanation": "Chọn C — Dẫn chứng Track 2: Tham khảo audio script chi tiết của bài nghe 2."
+  },
+  {
+    "id": 8,
+    "section": "PHẦN I: LISTENING (NGHE HIỂU)",
+    "sectionBadge": "Part 2. Interview / Talk",
+    "question": "How does Dr. Ha define true friendship?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Good friends must always wear the exact same brand of footwear"
+      },
+      {
+        "key": "B",
+        "text": "Genuine friends appreciate your character rather than material possessions"
+      },
+      {
+        "key": "C",
+        "text": "True friends only spend time together when shopping in luxury malls"
+      },
+      {
+        "key": "D",
+        "text": "Real friends demand that you abandon all your personal hobbies"
+      }
+    ],
+    "correct": "B",
+    "explanation": "Chọn B — Dẫn chứng Track 2: Tham khảo audio script chi tiết của bài nghe 2."
+  },
+  {
+    "id": 9,
+    "section": "PHẦN II: MULTIPLE CHOICE (TRẮC NGHIỆM)",
+    "sectionBadge": "Language Focus",
+    "question": "The tourists asked the artisan ________ to mix natural leaf dyes to achieve that vibrant green color.",
+    "options": [
+      {
+        "key": "A",
+        "text": "why"
+      },
+      {
+        "key": "B",
+        "text": "what"
+      },
+      {
+        "key": "C",
+        "text": "which"
+      },
+      {
+        "key": "D",
+        "text": "how"
+      }
+    ],
+    "correct": "D",
+    "explanation": "Chọn D — Cấu trúc *Wh-word + to-V*: 'how to mix' (cách pha chế màu). (Dịch: Các du khách đã hỏi nghệ nhân cách pha thuốc nhuộm từ lá cây tự nhiên để có được màu xanh lá rực rỡ ấy.)"
+  },
+  {
+    "id": 10,
+    "section": "PHẦN II: MULTIPLE CHOICE (TRẮC NGHIỆM)",
+    "sectionBadge": "Language Focus",
+    "question": "The ________ students practice asserting themselves, the ________ confident they feel against peer pressure.",
+    "options": [
+      {
+        "key": "A",
+        "text": "most - most"
+      },
+      {
+        "key": "B",
+        "text": "more - much"
+      },
+      {
+        "key": "C",
+        "text": "more - more"
+      },
+      {
+        "key": "D",
+        "text": "many - more"
+      }
+    ],
+    "correct": "C",
+    "explanation": "Chọn C — Cấu trúc so sánh kép (Double comparative): *The more students practice..., the more confident they feel...* (Dịch: Học sinh càng luyện tập việc khẳng định chính kiến của mình, họ càng cảm thấy tự tin hơn trước áp lực bạn bè.)"
+  },
+  {
+    "id": 11,
+    "section": "PHẦN II: MULTIPLE CHOICE (TRẮC NGHIỆM)",
+    "sectionBadge": "Language Focus",
+    "question": "If you ________ overwhelmed by test anxiety, you ________ take deep breaths and speak with your advisor.",
+    "options": [
+      {
+        "key": "A",
+        "text": "feel - can"
+      },
+      {
+        "key": "B",
+        "text": "felt - will"
+      },
+      {
+        "key": "C",
+        "text": "will feel - should"
+      },
+      {
+        "key": "D",
+        "text": "feels - would"
+      }
+    ],
+    "correct": "A",
+    "explanation": "Chọn A — Câu điều kiện loại 1 với modal verb: *If + S + V(hiện tại), S + can/should + V-inf*. (Dịch: Nếu bạn cảm thấy bị ngợp bởi nỗi lo thi cử, bạn có thể hít thở sâu và trò chuyện với cố vấn học tập của mình.)"
+  },
+  {
+    "id": 12,
+    "section": "PHẦN II: MULTIPLE CHOICE (TRẮC NGHIỆM)",
+    "sectionBadge": "Language Focus",
+    "question": "Many traditional families continue to ________ down authentic folk painting techniques from fathers to sons.",
+    "options": [
+      {
+        "key": "A",
+        "text": "cut"
+      },
+      {
+        "key": "B",
+        "text": "run"
+      },
+      {
+        "key": "C",
+        "text": "pass"
+      },
+      {
+        "key": "D",
+        "text": "turn"
+      }
+    ],
+    "correct": "C",
+    "explanation": "Chọn C — Cụm động từ: *pass down* (truyền lại, lưu truyền cho thế hệ sau). (Dịch: Nhiều gia đình truyền thống tiếp tục truyền lại kỹ thuật vẽ tranh dân gian chính gốc từ đời cha sang đời con.)"
+  },
+  {
+    "id": 13,
+    "section": "PHẦN II: MULTIPLE CHOICE (TRẮC NGHIỆM)",
+    "sectionBadge": "Language Focus",
+    "question": "Developing a sustainable ________ economy helps urban centers recycle materials and eliminate toxic landfills.",
+    "options": [
+      {
+        "key": "A",
+        "text": "stressful"
+      },
+      {
+        "key": "B",
+        "text": "circular"
+      },
+      {
+        "key": "C",
+        "text": "negative"
+      },
+      {
+        "key": "D",
+        "text": "congested"
+      }
+    ],
+    "correct": "B",
+    "explanation": "Chọn B — Từ vựng Unit 2: *circular economy* (nền kinh tế tuần hoàn). *Congested*: tắc nghẽn; *stressful*: căng thẳng. (Dịch: Phát triển một nền kinh tế tuần hoàn bền vững giúp các trung tâm đô thị tái chế vật liệu và xóa bỏ các bãi chôn lấp rác độc hại.)"
+  },
+  {
+    "id": 14,
+    "section": "PHẦN II: MULTIPLE CHOICE (TRẮC NGHIỆM)",
+    "sectionBadge": "Everyday Communication",
+    "question": "Student: 'I'm afraid my classmates will laugh at me if I give a wrong answer.' - Teacher: '________'",
+    "options": [
+      {
+        "key": "A",
+        "text": "You should stay silent in every lesson to be completely safe."
+      },
+      {
+        "key": "B",
+        "text": "Never mind, you will definitely fail the test."
+      },
+      {
+        "key": "C",
+        "text": "I don't care whether you speak or not."
+      },
+      {
+        "key": "D",
+        "text": "Making mistakes is a natural part of learning. Be brave and share your thoughts!"
+      }
+    ],
+    "correct": "D",
+    "explanation": "Chọn D — Lời động viên sư phạm chuẩn mực khích lệ học sinh tự tin, không sợ mắc lỗi khi phát biểu. (Dịch: Học sinh: 'Em sợ các bạn sẽ cười em nếu em trả lời sai ạ.' - Giáo viên: 'Mắc lỗi là một phần tự nhiên của việc học. Hãy dũng cảm chia sẻ suy nghĩ của em nhé!')"
+  },
+  {
+    "id": 15,
+    "section": "PHẦN II: MULTIPLE CHOICE (TRẮC NGHIỆM)",
+    "sectionBadge": "Everyday Communication",
+    "question": "Mai: 'Thank you for showing me how to print that lovely Dong Ho folk picture!' - Artisan: '________'",
+    "options": [
+      {
+        "key": "A",
+        "text": "You must pay an exorbitant fee right now."
+      },
+      {
+        "key": "B",
+        "text": "Why didn't you buy ten more pictures?"
+      },
+      {
+        "key": "C",
+        "text": "Don't touch any of my woodblocks again."
+      },
+      {
+        "key": "D",
+        "text": "It was my pleasure! I'm delighted that you love our traditional craft."
+      }
+    ],
+    "correct": "D",
+    "explanation": "Chọn D — Lời đáp lễ phép, niềm nở của nghệ nhân làng nghề khi khách du lịch cảm ơn. (Dịch: Mai: 'Cháu cảm ơn bác đã chỉ cho cháu cách in bức tranh dân gian Đông Hồ đáng yêu này ạ!' - Nghệ nhân: 'Đó là niềm vui của bác! Bác rất mừng vì cháu yêu quý nghề truyền thống của quê mình.')"
+  },
+  {
+    "id": 16,
+    "section": "PHẦN II: MULTIPLE CHOICE (TRẮC NGHIỆM)",
+    "sectionBadge": "Signs & Notices",
+    "question": "What does this yellow warning sign signify?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Danger ahead due to active construction work; unauthorized persons must not enter."
+      },
+      {
+        "key": "B",
+        "text": "You can park your private car freely inside this open area."
+      },
+      {
+        "key": "C",
+        "text": "Children are warmly invited to play sports on this construction site."
+      },
+      {
+        "key": "D",
+        "text": "Free safety helmets are sold here for tourists."
+      }
+    ],
+    "correct": "A",
+    "explanation": "Chọn A — Biển cảnh báo nguy hiểm công trường đang thi công: Nghiêm cấm người không có phận sự vào khu vực. (Dịch: Khu vực nguy hiểm phía trước do đang thi công công trình; người không phận sự tuyệt đối không được vào.)",
+    "notice": "<b>⚠️ YELLOW TRIANGULAR SIGN: CONSTRUCTION SITE / HARD HATS REQUIRED</b><br>⚠️ HÌNH ẢNH: Biển tam giác viền đen, nền vàng, có hình công nhân đội mũ bảo hộ đang làm việc kèm dòng chữ cảnh báo.<br>SAFETY REGULATION: DANGER - CONSTRUCTION SITE - AUTHORIZED PERSONNEL ONLY"
+  },
+  {
+    "id": 17,
+    "section": "PHẦN II: MULTIPLE CHOICE (TRẮC NGHIỆM)",
+    "sectionBadge": "Signs & Notices",
+    "question": "What does this notice on the school bulletin board announce?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Students are encouraged to donate gently used books to raise charitable funds for children in need."
+      },
+      {
+        "key": "B",
+        "text": "The school main courtyard will be closed for sports competitions on Friday."
+      },
+      {
+        "key": "C",
+        "text": "Students must buy five new dictionaries to enter the courtyard."
+      },
+      {
+        "key": "D",
+        "text": "Winter coats are being sold at expensive prices to all teachers."
+      }
+    ],
+    "correct": "A",
+    "explanation": "Chọn A — Bảng thông báo kêu gọi quyên góp sách cũ phục vụ hội chợ từ thiện ủng hộ trẻ em nghèo vùng cao. (Dịch: Học sinh được khuyến khích quyên góp sách truyện còn tốt để gây quỹ từ thiện cho trẻ em có hoàn cảnh khó khăn.)",
+    "notice": "<b>📢 ANNUAL CHARITY BOOK FAIR FOR RURAL STUDENTS</b><br>Time: Friday, October 28th, from 8:30 a.m. to 4:00 p.m.<br>Location: School Main Courtyard.<br>Call for donation: Please donate old storybooks, dictionaries, or notebooks in good condition. All funds raised will buy winter coats for mountainous children."
+  },
+  {
+    "id": 18,
+    "section": "PHẦN II: MULTIPLE CHOICE (TRẮC NGHIỆM)",
+    "sectionBadge": "Closest Meaning",
+    "question": "Mark the letter A, B, C, or D to indicate the sentence that is CLOSEST in meaning to the following sentence:\n'Where should I submit our group proposal for the clean green neighborhood contest?' Linda asked.",
+    "options": [
+      {
+        "key": "A",
+        "text": "Linda wondered who to write their group proposal for the contest."
+      },
+      {
+        "key": "B",
+        "text": "Linda told me that she had already submitted the proposal."
+      },
+      {
+        "key": "C",
+        "text": "Linda advised us where we could throw the group proposal away."
+      },
+      {
+        "key": "D",
+        "text": "Linda asked where to submit their group proposal for the clean green neighborhood contest."
+      }
+    ],
+    "correct": "D",
+    "explanation": "Chọn D — Rút gọn mệnh đề danh từ trong câu gián tiếp: *where should I submit* → *where to submit*. (Dịch: Linda hỏi nơi nộp đề án nhóm của mình cho cuộc thi khu phố xanh sạch đẹp.)"
+  },
+  {
+    "id": 19,
+    "section": "PHẦN II: MULTIPLE CHOICE (TRẮC NGHIỆM)",
+    "sectionBadge": "Sentence Combining",
+    "question": "Mark the letter A, B, C, or D to indicate the sentence that best combines each pair of sentences:\nThe school provides more mental health counselling workshops. Students cope with exam anxiety more effectively.",
+    "options": [
+      {
+        "key": "A",
+        "text": "The more mental health counselling workshops the school provides, the more effectively students cope with exam anxiety."
+      },
+      {
+        "key": "B",
+        "text": "The most counselling workshops provided, the most effective students cope."
+      },
+      {
+        "key": "C",
+        "text": "The more the school provides workshops, students cope with anxiety less effectively."
+      },
+      {
+        "key": "D",
+        "text": "As the school provides workshops, students feel more anxious."
+      }
+    ],
+    "correct": "A",
+    "explanation": "Chọn A — Cấu trúc so sánh kép: *The more mental health counselling workshops the school provides, the more effectively students cope with exam anxiety.* (Dịch: Nhà trường càng tổ chức nhiều hội thảo tư vấn sức khỏe tâm lý, thì học sinh càng đối phó với sự lo âu thi cử một cách hiệu quả hơn.)"
+  },
+  {
+    "id": 20,
+    "section": "PHẦN II: MULTIPLE CHOICE (TRẮC NGHIỆM)",
+    "sectionBadge": "Sentence Arrangement",
+    "question": "Mark the letter A, B, C, or D to indicate the correct arrangement of the sentences to make a meaningful conversation.",
+    "options": [
+      {
+        "key": "A",
+        "text": "b - a - c - d"
+      },
+      {
+        "key": "B",
+        "text": "a - b - d - c"
+      },
+      {
+        "key": "C",
+        "text": "a - c - b - d"
+      },
+      {
+        "key": "D",
+        "text": "d - b - a - c"
+      }
+    ],
+    "correct": "B",
+    "explanation": "Chọn B — Trình tự hợp lý: a (Chia sẻ nỗi buồn khi bị chê bai đôi giày) → b (Khuyên bạn đừng để những lời bình phẩm nông cạn làm giảm giá trị bản thân) → d (Khẳng định tính cách và trí tuệ quan trọng hơn đồ hiệu) → c (Cảm ơn vì lời động viên). (Dịch: Thứ tự đúng: a - b - d - c.)",
+    "arrangement": [
+      {
+        "label": "a.",
+        "text": "'I was really hurt when they laughed at my simple shoes yesterday.'"
+      },
+      {
+        "label": "b.",
+        "text": "'Don't let their superficial comments undermine your self-worth, Phuc.'"
+      },
+      {
+        "label": "c.",
+        "text": "'Thank you, Mai. Your words give me so much strength.'"
+      },
+      {
+        "label": "d.",
+        "text": "'True character and intelligence matter infinitely more than luxury labels.'"
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "section": "PHẦN II: MULTIPLE CHOICE (TRẮC NGHIỆM)",
+    "sectionBadge": "Sentence Arrangement",
+    "question": "Mark the letter A, B, C, or D to indicate the correct arrangement of the sentences to make a meaningful paragraph about Dong Ho folk painting.",
+    "options": [
+      {
+        "key": "A",
+        "text": "d - a - c - b"
+      },
+      {
+        "key": "B",
+        "text": "a - d - b - c"
+      },
+      {
+        "key": "C",
+        "text": "a - b - d - c"
+      },
+      {
+        "key": "D",
+        "text": "b - d - a - c"
+      }
+    ],
+    "correct": "B",
+    "explanation": "Chọn B — Trình tự logic: a (Nguồn gốc lịch sử từ thế kỷ 16) → d (Kỹ thuật chế tác màu từ tro lá cây) → b (Ý nghĩa biểu tượng cầu chúc thịnh vượng) → c (Kết luận: sự cấp thiết của việc bảo tồn). (Dịch: Thứ tự đúng: a - d - b - c.)",
+    "arrangement": [
+      {
+        "label": "a.",
+        "text": "Dating back to the sixteenth century, Dong Ho folk art is deeply rooted in Vietnamese agricultural life."
+      },
+      {
+        "label": "b.",
+        "text": "Each painting conveys profound wishes for wealth, peace, longevity, and familial harmony."
+      },
+      {
+        "label": "c.",
+        "text": "Therefore, preserving these woodblock treasures is vital to safeguarding our national cultural identity."
+      },
+      {
+        "label": "d.",
+        "text": "Using organic colors made from ashes and leaves, artisans vividly depict pastoral village scenes."
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "section": "PHẦN II: MULTIPLE CHOICE (TRẮC NGHIỆM)",
+    "sectionBadge": "Cloze-test (Reading)",
+    "question": "Chọn từ/cụm từ thích hợp nhất để điền vào chỗ trống <b>(22)</b> trong đoạn văn trên:",
+    "options": [
+      {
+        "key": "A",
+        "text": "congestion"
+      },
+      {
+        "key": "B",
+        "text": "pollutant"
+      },
+      {
+        "key": "C",
+        "text": "fertilizer"
+      },
+      {
+        "key": "D",
+        "text": "drawback"
+      }
+    ],
+    "correct": "C",
+    "explanation": "Chọn C — *Fertilizer* /ˈfɜːtəlaɪzər/ (phân bón dinh dưỡng cho cây trồng). (Dịch: Biến thành phân bón giàu dinh dưỡng cho các khu vườn cộng đồng.)",
+    "passage": "<b>ĐỌC ĐOẠN VĂN SAU VÀ CHỌN TỪ THÍCH HỢP ĐIỀN VÀO CHỖ TRỐNG (CÂU 22 - 26):</b><br><br>Across modern metropolitan areas, civic leaders are shifting toward zero-waste strategies to combat environmental degradation. In a zero-waste city, the traditional linear model of 'take, make, and dispose' is replaced by circular practices where all products are reused, repaired, or composted. Households are provided with separate color-coded bins to categorize kitchen compost, paper, and glass containers. If organic waste is properly sorted, it can be transformed into nutrient-rich (22)______ for urban community gardens. (23)______, achieving a truly zero-waste city is impossible without widespread citizen compliance. Municipal authorities have carried (24)______ numerous educational programs in secondary schools to teach teenagers the principles of recycling. Young volunteers actively assist senior neighbors in learning (25)______ to compost household scraps safely. When every community member feels responsible (26)______ environmental conservation, the city evolves into a much cleaner, healthier, and more liveable haven for everyone."
+  },
+  {
+    "id": 23,
+    "section": "PHẦN II: MULTIPLE CHOICE (TRẮC NGHIỆM)",
+    "sectionBadge": "Cloze-test (Reading)",
+    "question": "Chọn từ/cụm từ thích hợp nhất để điền vào chỗ trống <b>(23)</b> trong đoạn văn trên:",
+    "options": [
+      {
+        "key": "A",
+        "text": "Therefore"
+      },
+      {
+        "key": "B",
+        "text": "However"
+      },
+      {
+        "key": "C",
+        "text": "Although"
+      },
+      {
+        "key": "D",
+        "text": "Because"
+      }
+    ],
+    "correct": "B",
+    "explanation": "Chọn B — Liên từ chỉ ý tương phản bổ sung: *However* (Tuy nhiên). (Dịch: Tuy nhiên, việc đạt được một thành phố không rác thải thực sự là bất khả thi nếu không có sự tuân thủ rộng rãi của người dân.)"
+  },
+  {
+    "id": 24,
+    "section": "PHẦN II: MULTIPLE CHOICE (TRẮC NGHIỆM)",
+    "sectionBadge": "Cloze-test (Reading)",
+    "question": "Chọn từ/cụm từ thích hợp nhất để điền vào chỗ trống <b>(24)</b> trong đoạn văn trên:",
+    "options": [
+      {
+        "key": "A",
+        "text": "down"
+      },
+      {
+        "key": "B",
+        "text": "off"
+      },
+      {
+        "key": "C",
+        "text": "out"
+      },
+      {
+        "key": "D",
+        "text": "up"
+      }
+    ],
+    "correct": "C",
+    "explanation": "Chọn C — Cụm động từ: *carry out* (tiến hành, triển khai các chương trình giáo dục). (Dịch: Chính quyền thành phố đã triển khai nhiều chương trình giáo dục.)"
+  },
+  {
+    "id": 25,
+    "section": "PHẦN II: MULTIPLE CHOICE (TRẮC NGHIỆM)",
+    "sectionBadge": "Cloze-test (Reading)",
+    "question": "Chọn từ/cụm từ thích hợp nhất để điền vào chỗ trống <b>(25)</b> trong đoạn văn trên:",
+    "options": [
+      {
+        "key": "A",
+        "text": "which"
+      },
+      {
+        "key": "B",
+        "text": "why"
+      },
+      {
+        "key": "C",
+        "text": "how"
+      },
+      {
+        "key": "D",
+        "text": "what"
+      }
+    ],
+    "correct": "C",
+    "explanation": "Chọn C — Cấu trúc *learn how to + V-inf*: *how to compost* (cách ủ rác hữu cơ an toàn). (Dịch: Học cách ủ rác hữu cơ sinh hoạt an toàn.)"
+  },
+  {
+    "id": 26,
+    "section": "PHẦN II: MULTIPLE CHOICE (TRẮC NGHIỆM)",
+    "sectionBadge": "Cloze-test (Reading)",
+    "question": "Chọn từ/cụm từ thích hợp nhất để điền vào chỗ trống <b>(26)</b> trong đoạn văn trên:",
+    "options": [
+      {
+        "key": "A",
+        "text": "with"
+      },
+      {
+        "key": "B",
+        "text": "on"
+      },
+      {
+        "key": "C",
+        "text": "in"
+      },
+      {
+        "key": "D",
+        "text": "for"
+      }
+    ],
+    "correct": "D",
+    "explanation": "Chọn D — Cụm tính từ đi với giới từ: *responsible for something* (có trách nhiệm đối với điều gì). (Dịch: Khi mọi thành viên cộng đồng cảm thấy có trách nhiệm đối với việc bảo vệ môi trường.)"
+  },
+  {
+    "id": 27,
+    "section": "PHẦN II: MULTIPLE CHOICE (TRẮC NGHIỆM)",
+    "sectionBadge": "Reading Comprehension",
+    "question": "What is the primary topic of the passage?",
+    "options": [
+      {
+        "key": "A",
+        "text": "The technical specifications of smartphone digital displays"
+      },
+      {
+        "key": "B",
+        "text": "The vital biological benefits of sufficient sleep for adolescents' growth and academic performance"
+      },
+      {
+        "key": "C",
+        "text": "Why teenagers should never participate in school examinations"
+      },
+      {
+        "key": "D",
+        "text": "The historical invention of the human growth hormone"
+      }
+    ],
+    "correct": "B",
+    "explanation": "Chọn B — Bài đọc làm nổi bật tầm quan trọng sinh học của giấc ngủ đủ đối với sự phát triển thể chất và kết quả học tập của lứa tuổi thanh thiếu niên. (Dịch: Chủ đề chính: Những lợi ích sinh học then chốt của giấc ngủ đủ đối với sự phát triển và thành tích học tập của thanh thiếu niên.)",
+    "passage": "<b>ĐỌC VĂN BẢN SAU VÀ CHỌN ĐÁP ÁN ĐÚNG NHẤT CHO CÁC CÂU HỎI (CÂU 27 - 31):</b><br><br>During early adolescence, human physiology undergoes rapid, profound changes that demand immense amounts of biological energy. Among all lifestyle factors, obtaining adequate, restorative sleep plays the most decisive role in supporting healthy physical growth and emotional stability. Neuroscientific investigations demonstrate that during deep slow-wave sleep, the pituitary gland releases pulses of human growth hormone, which repair body tissues, build muscular strength, and stimulate bone elongation. Furthermore, while a teenager sleeps, the brain activates its glymphatic system—a specialized biological waste-clearance mechanism that flushes out metabolic toxins accumulated throughout intense study hours.<br><br>In addition to physical benefits, sleep serves as the cognitive foundation for academic mastery. While students rest, the hippocampus actively replays and consolidates recently learned academic material, transferring key facts from fragile short-term memory stores into stable long-term neural pathways. A student who routinely sleeps eight hours before a mathematics examination can synthesize analytical concepts with noticeably greater clarity and mental agility than one who sacrifices rest to cram all night. Conversely, chronic sleep loss degrades executive functioning, rendering students emotionally volatile, impatient, and prone to severe anxiety.<br><br>Regrettably, modern teenagers face unprecedented barriers to healthy sleep hygiene. Digital entertainment, algorithmic social media feeds, and late-night homework pressures frequently delay bedtime past midnight. Medical experts urge parents and schools to establish consistent bedtime rituals. By disconnecting electronic gadgets at least forty-five minutes before retiring and keeping bedrooms cool and dimly lit, adolescents can easily reclaim their natural biological rhythms, ensuring vibrant health and boundless academic enthusiasm."
+  },
+  {
+    "id": 28,
+    "section": "PHẦN II: MULTIPLE CHOICE (TRẮC NGHIỆM)",
+    "sectionBadge": "Reading Comprehension",
+    "question": "According to paragraph 1, what essential process occurs during deep slow-wave sleep?",
+    "options": [
+      {
+        "key": "A",
+        "text": "The brain forgets all memories stored from childhood"
+      },
+      {
+        "key": "B",
+        "text": "The body releases growth hormones to repair tissues and flushes out metabolic brain toxins"
+      },
+      {
+        "key": "C",
+        "text": "The human heart completely stops beating for thirty minutes"
+      },
+      {
+        "key": "D",
+        "text": "The body converts all proteins into carbon dioxide"
+      }
+    ],
+    "correct": "B",
+    "explanation": "Chọn B — Dẫn chứng đoạn 1: 'pituitary gland releases pulses of human growth hormone, which repair body tissues... flushes out metabolic toxins accumulated throughout intense study hours.' (Dịch: Cơ thể giải phóng hormone tăng trưởng để phục hồi tế bào và đào thải độc tố trong não.)"
+  },
+  {
+    "id": 29,
+    "section": "PHẦN II: MULTIPLE CHOICE (TRẮC NGHIỆM)",
+    "sectionBadge": "Reading Comprehension",
+    "question": "The word 'consolidates' in paragraph 2 is closest in meaning to ________.",
+    "options": [
+      {
+        "key": "A",
+        "text": "strengthens and solidifies"
+      },
+      {
+        "key": "B",
+        "text": "destroys and erases"
+      },
+      {
+        "key": "C",
+        "text": "weakens and reduces"
+      },
+      {
+        "key": "D",
+        "text": "ignores and forgets"
+      }
+    ],
+    "correct": "A",
+    "explanation": "Chọn A — *Consolidate* /kənˈsɒlɪdeɪt/ (củng cố vững chắc, khắc sâu vào trí nhớ) = *strengthens and solidifies*. (Dịch: Từ 'consolidate' đồng nghĩa với củng cố và làm cho vững chắc.)"
+  },
+  {
+    "id": 30,
+    "section": "PHẦN II: MULTIPLE CHOICE (TRẮC NGHIỆM)",
+    "sectionBadge": "Reading Comprehension",
+    "question": "According to paragraph 2, why does cramming all night harm a student's test performance?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Because mathematics exams are always cancelled if students study too much"
+      },
+      {
+        "key": "B",
+        "text": "Because staying awake makes students too confident to read the exam paper"
+      },
+      {
+        "key": "C",
+        "text": "Because students will forget their names immediately"
+      },
+      {
+        "key": "D",
+        "text": "Because chronic sleep deprivation impairs analytical clarity and executive mental functions"
+      }
+    ],
+    "correct": "D",
+    "explanation": "Chọn D — Dẫn chứng đoạn 2: 'chronic sleep loss degrades executive functioning, rendering students emotionally volatile, impatient, and prone to severe anxiety.' (Dịch: Thiếu ngủ kinh niên làm suy giảm khả năng tư duy phân tích và chức năng điều hành của não bộ.)"
+  },
+  {
+    "id": 31,
+    "section": "PHẦN II: MULTIPLE CHOICE (TRẮC NGHIỆM)",
+    "sectionBadge": "Reading Comprehension",
+    "question": "What practical measure do experts advise in the final paragraph to improve sleep hygiene?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Drinking three cups of iced milk tea right before falling asleep"
+      },
+      {
+        "key": "B",
+        "text": "Studying continuously until 3 a.m. with bright overhead lights"
+      },
+      {
+        "key": "C",
+        "text": "Turning off digital screens at least 45 minutes before bedtime and keeping bedrooms dark"
+      },
+      {
+        "key": "D",
+        "text": "Placing smartphone screens directly under pillows while sleeping"
+      }
+    ],
+    "correct": "C",
+    "explanation": "Chọn C — Dẫn chứng đoạn cuối: 'disconnecting electronic gadgets at least forty-five minutes before retiring and keeping bedrooms cool and dimly lit.' (Dịch: Tắt các thiết bị điện tử ít nhất 45 phút trước khi đi ngủ và giữ phòng ngủ mát mẻ, ánh sáng dịu.)"
+  },
+  {
+    "id": 32,
+    "section": "PHẦN III: WRITTEN TEST (TỰ LUẬN TRẮC NGHIỆM HÓA)",
+    "sectionBadge": "Part 1. Word Formation",
+    "question": "Chia đúng dạng từ trong ngoặc: <i>The artisan skillfully carved ________ woodblocks to produce traditional lunar calendar prints. (INTRICATE)</i>",
+    "options": [
+      {
+        "key": "A",
+        "text": "intricately"
+      },
+      {
+        "key": "B",
+        "text": "intricacy"
+      },
+      {
+        "key": "C",
+        "text": "unintricate"
+      },
+      {
+        "key": "D",
+        "text": "intricate"
+      }
+    ],
+    "correct": "D",
+    "explanation": "Chọn D — Trước danh từ 'woodblocks' cần tính từ: intricate (adj: tinh xảo, tỉ mỉ)."
+  },
+  {
+    "id": 33,
+    "section": "PHẦN III: WRITTEN TEST (TỰ LUẬN TRẮC NGHIỆM HÓA)",
+    "sectionBadge": "Part 1. Word Formation",
+    "question": "Chia đúng dạng từ trong ngoặc: <i>City dwellers are increasingly adopting a minimalist lifestyle to achieve emotional ________. (SERENE)</i>",
+    "options": [
+      {
+        "key": "A",
+        "text": "serenely"
+      },
+      {
+        "key": "B",
+        "text": "sereness"
+      },
+      {
+        "key": "C",
+        "text": "serener"
+      },
+      {
+        "key": "D",
+        "text": "serenity"
+      }
+    ],
+    "correct": "D",
+    "explanation": "Chọn D — Sau tính từ 'emotional' cần danh từ: serene (adj) -> serenity (n: sự thanh thản, an yên trong tâm hồn)."
+  },
+  {
+    "id": 34,
+    "section": "PHẦN III: WRITTEN TEST (TỰ LUẬN TRẮC NGHIỆM HÓA)",
+    "sectionBadge": "Part 1. Word Formation",
+    "question": "Chia đúng dạng từ trong ngoặc: <i>The local youth center offers counseling programs to help teenagers build ________ against peer pressure. (RESILIENT)</i>",
+    "options": [
+      {
+        "key": "A",
+        "text": "resiliently"
+      },
+      {
+        "key": "B",
+        "text": "resilienceness"
+      },
+      {
+        "key": "C",
+        "text": "resilience"
+      },
+      {
+        "key": "D",
+        "text": "unresilient"
+      }
+    ],
+    "correct": "C",
+    "explanation": "Chọn C — Sau động từ 'build' cần danh từ: resilient (adj) -> resilience (n: bản lĩnh phục hồi, sự kiên cường)."
+  },
+  {
+    "id": 35,
+    "section": "PHẦN III: WRITTEN TEST (TỰ LUẬN TRẮC NGHIỆM HÓA)",
+    "sectionBadge": "Part 2. Sentence Transformation",
+    "question": "Viết lại câu sau sao cho nghĩa không đổi: <i>\"What should we do to preserve ancient woodblock printing?\" the young apprentice asked.</i>",
+    "options": [
+      {
+        "key": "A",
+        "text": "The young apprentice asked what should they do to preserve ancient woodblock printing."
+      },
+      {
+        "key": "B",
+        "text": "The young apprentice asked what to do to preserve ancient woodblock printing."
+      },
+      {
+        "key": "C",
+        "text": "The young apprentice asked what doing to preserve ancient woodblock printing."
+      },
+      {
+        "key": "D",
+        "text": "The young apprentice asked what to did to preserve ancient woodblock printing."
+      }
+    ],
+    "correct": "B",
+    "explanation": "Chọn B — Rút gọn mệnh đề danh từ: Wh-word + to-V -> 'what to do to preserve...'."
+  },
+  {
+    "id": 36,
+    "section": "PHẦN III: WRITTEN TEST (TỰ LUẬN TRẮC NGHIỆM HÓA)",
+    "sectionBadge": "Part 2. Sentence Transformation",
+    "question": "Viết lại câu sau sao cho nghĩa không đổi: <i>Get enough sleep, or your academic performance will drop drastically.</i>",
+    "options": [
+      {
+        "key": "A",
+        "text": "If you don't get enough sleep, your academic performance will drop drastically."
+      },
+      {
+        "key": "B",
+        "text": "If you get enough sleep, your academic performance will drop drastically."
+      },
+      {
+        "key": "C",
+        "text": "Unless you don't get enough sleep, your academic performance will drop drastically."
+      },
+      {
+        "key": "D",
+        "text": "If you didn't get enough sleep, your academic performance will drop drastically."
+      }
+    ],
+    "correct": "A",
+    "explanation": "Chọn A — Chuyển câu mệnh lệnh cảnh báo sang câu điều kiện loại 1 phủ định: 'If you don't get enough sleep...'."
+  },
+  {
+    "id": 37,
+    "section": "PHẦN III: WRITTEN TEST (TỰ LUẬN TRẮC NGHIỆM HÓA)",
+    "sectionBadge": "Part 2. Sentence Transformation",
+    "question": "Viết lại câu sau sao cho nghĩa không đổi: <i>If you spend more time walking in nature, you feel more energetic.</i>",
+    "options": [
+      {
+        "key": "A",
+        "text": "The most time you spend walking in nature, the most energetic you feel."
+      },
+      {
+        "key": "B",
+        "text": "The more time you spend walking in nature, the more energetic you feel."
+      },
+      {
+        "key": "C",
+        "text": "The more time you spend walking in nature, you feel more energetic."
+      },
+      {
+        "key": "D",
+        "text": "As more time you spend walking in nature, the more energetic you feel."
+      }
+    ],
+    "correct": "B",
+    "explanation": "Chọn B — Cấu trúc so sánh kép: The more time..., the more energetic..."
+  },
+  {
+    "id": 38,
+    "section": "PHẦN III: WRITTEN TEST (TỰ LUẬN TRẮC NGHIỆM HÓA)",
+    "sectionBadge": "Part 3. Sentence Building",
+    "question": "Dựng câu hoàn chỉnh từ các từ gợi ý: <i>He / not / know / what / say / when / his / friends / tease / him.</i>",
+    "options": [
+      {
+        "key": "A",
+        "text": "He does not know what saying when his friends tease him."
+      },
+      {
+        "key": "B",
+        "text": "He is not knowing what to say when his friends tease him."
+      },
+      {
+        "key": "C",
+        "text": "He does not know what to say when his friends tease him."
+      },
+      {
+        "key": "D",
+        "text": "He does not know what to say when his friends teasing him."
+      }
+    ],
+    "correct": "C",
+    "explanation": "Chọn C — Hiện tại đơn phủ định 'does not know' kết hợp 'what to say' và mệnh đề thời gian 'when his friends tease him'."
+  },
+  {
+    "id": 39,
+    "section": "PHẦN III: WRITTEN TEST (TỰ LUẬN TRẮC NGHIỆM HÓA)",
+    "sectionBadge": "Part 3. Sentence Building",
+    "question": "Dựng câu hoàn chỉnh từ các từ gợi ý: <i>The / green / city / become / the / healthy / its / residents / live.</i>",
+    "options": [
+      {
+        "key": "A",
+        "text": "The greener the city becomes, the more healthily its residents live."
+      },
+      {
+        "key": "B",
+        "text": "The more green the city becomes, the more healthily its residents live."
+      },
+      {
+        "key": "C",
+        "text": "The greenest the city becomes, the most healthily its residents live."
+      },
+      {
+        "key": "D",
+        "text": "The greener the city becomes, its residents live more healthily."
+      }
+    ],
+    "correct": "A",
+    "explanation": "Chọn A — Cấu trúc so sánh kép: The greener the city becomes, the more healthily its residents live."
+  },
+  {
+    "id": 40,
+    "section": "PHẦN III: WRITTEN TEST (TỰ LUẬN TRẮC NGHIỆM HÓA)",
+    "sectionBadge": "Part 3. Sentence Building",
+    "question": "Dựng câu hoàn chỉnh từ các từ gợi ý: <i>If / teens / practice / mindfulness / they / can / overcome / daily / stress.</i>",
+    "options": [
+      {
+        "key": "A",
+        "text": "If teens practice mindfulness, they can overcome daily stress."
+      },
+      {
+        "key": "B",
+        "text": "If teens will practice mindfulness, they can overcome daily stress."
+      },
+      {
+        "key": "C",
+        "text": "If teens practice mindfulness, they can overcome with daily stress."
+      },
+      {
+        "key": "D",
+        "text": "If teens practiced mindfulness, they can overcome daily stress."
+      }
+    ],
+    "correct": "A",
+    "explanation": "Chọn A — Câu điều kiện loại 1 với modal verb 'can': 'practice mindfulness' và 'overcome daily stress'."
+  }
+];
+
+    const TEN_BAI_THI = "Đề 09 GK1 Tiếng Anh 9 (Mã 909) - Chuẩn Cần Thơ";
+    const URL_NHAN_DIEM = "https://script.google.com/macros/s/AKfycbywF3afxl8E2_c8cKkfPC7FjLO-2kTFIlcSgJftZT4dyRraswwPlZ8zcFw725S4Mwx_/exec";
+
+    let userAnswers = {};
+    let isSubmitted = false;
+    let totalSecondsRemaining = 60 * 60;
+    let timeSpentSeconds = 0;
+    let timerInterval = null;
+
+    function startTimer() {
+      const timerDisplay = document.getElementById('timerDisplay');
+      const timerBadge = document.getElementById('timerBadge');
+
+      timerInterval = setInterval(() => {
+        if (isSubmitted) {
+          clearInterval(timerInterval);
+          return;
+        }
+
+        timeSpentSeconds++;
+        totalSecondsRemaining--;
+
+        if (totalSecondsRemaining <= 0) {
+          clearInterval(timerInterval);
+          alert('Đã hết 60 phút làm bài! Hệ thống sẽ tự động nộp bài.');
+          submitExam();
+          return;
+        }
+
+        const minutes = Math.floor(totalSecondsRemaining / 60);
+        const seconds = totalSecondsRemaining % 60;
+        timerDisplay.innerText = `${minutes < 10 ? '0' : ''}${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+
+        if (totalSecondsRemaining < 300) {
+          timerBadge.classList.add('warning');
+        }
+      }, 1000);
+    }
+
+    function renderQuestions() {
+      const container = document.getElementById('questionsContainer');
+      let currentSection = '';
+      let html = '';
+
+      QUESTIONS_DATA.forEach((q, idx) => {
+        if (q.section !== currentSection) {
+          currentSection = q.section;
+          html += `
+            <div class="section-header">
+              <span class="section-title">${currentSection}</span>
+              <span class="section-badge">${q.sectionBadge || 'Trọng tâm kiến thức'}</span>
+            </div>
+          `;
+        }
+
+        if (q.audioTrack) {
+          let f = q.audioTrack.file;
+          let alt = f;
+          if (f.startsWith('08_De_07')) alt = f.replace('08_De_07', '07_De_07');
+          else if (f.startsWith('07_De_07')) alt = f.replace('07_De_07', '08_De_07');
+          else if (f.startsWith('10_De_09')) alt = f.replace('10_De_09', '09_De_09');
+          else if (f.startsWith('09_De_09')) alt = f.replace('09_De_09', '10_De_09');
+          else if (f.startsWith('11_De_10')) alt = f.replace('11_De_10', '10_De_10');
+          else if (f.startsWith('10_De_10')) alt = f.replace('10_De_10', '11_De_10');
+          else if (f.startsWith('07_De_06')) alt = f.replace('07_De_06', '06_De_06');
+          else if (f.startsWith('06_De_06')) alt = f.replace('06_De_06', '07_De_06');
+          else if (f.startsWith('09_De_08')) alt = f.replace('09_De_08', '08_De_08');
+          else if (f.startsWith('08_De_08')) alt = f.replace('08_De_08', '09_De_08');
+
+          html += `
+            <div class="audio-card">
+              <div class="audio-icon">🎧</div>
+              <div class="audio-content">
+                <h4>${q.audioTrack.title}</h4>
+                <p>${q.audioTrack.desc}</p>
+                <audio controls preload="auto" src="${f}" onerror="if(!this.dataset.fallback && '${alt}' !== '${f}'){this.dataset.fallback='1';this.src='${alt}';this.load();}">
+                  <source src="${f}" type="audio/mpeg">
+                  <source src="${alt}" type="audio/mpeg">
+                  <source src="Audio_Listening/${f}" type="audio/mpeg">
+                  <source src="Audio_Listening/${alt}" type="audio/mpeg">
+                  <source src="../Audio_Listening/${f}" type="audio/mpeg">
+                  <source src="../Audio_Listening/${alt}" type="audio/mpeg">
+                  <source src="Audio_Files/${f}" type="audio/mpeg">
+                  <source src="Audio_Files/${alt}" type="audio/mpeg">
+                  Trình duyệt của bạn không hỗ trợ phát âm thanh HTML5.
+                </audio>
+              </div>
+            </div>
+          `;
+        }
+
+        if (q.passage) {
+          html += `<div class="passage-box">${q.passage}</div>`;
+        }
+
+        if (q.notice) {
+          html += `<div class="notice-box">${q.notice}</div>`;
+        }
+
+        let arrangementHtml = '';
+        if (q.arrangement && q.arrangement.length > 0) {
+          arrangementHtml = `<div class="arrangement-box">` +
+            q.arrangement.map(item => `<div class="arr-item"><b>${item.label}</b> ${item.text}</div>`).join('') +
+            `</div>`;
+        }
+
+        const optionsHtml = q.options.map(opt => `
+          <label class="option-label" id="optLabel_${q.id}_${opt.key}" onclick="selectOption(${q.id}, '${opt.key}')">
+            <input type="radio" name="question_${q.id}" value="${opt.key}" id="radio_${q.id}_${opt.key}">
+            <span><b>${opt.key}.</b> ${opt.text}</span>
+          </label>
+        `).join('');
+
+        html += `
+          <div class="q-card" id="qCard_${q.id}">
+            <div class="q-header">
+              <span class="q-num">CÂU ${q.id}</span>
+              <div class="q-text">
+                ${q.question}
+                ${arrangementHtml}
+              </div>
+            </div>
+            <div class="options-grid">
+              ${optionsHtml}
+            </div>
+            <div class="explanation-box" id="exp_${q.id}">
+              <div class="exp-title">💡 Giải thích chi tiết & Hướng dẫn:</div>
+              <div>${q.explanation}</div>
+            </div>
+          </div>
+        `;
+      });
+
+      container.innerHTML = html;
+      container.querySelectorAll('audio').forEach(a => {
+        try { a.load(); } catch(e) {}
+      });
+    }
+
+    function selectOption(qId, key) {
+      if (isSubmitted) return;
+
+      userAnswers[qId] = key;
+      const radio = document.getElementById(`radio_${qId}_${key}`);
+      if (radio) radio.checked = true;
+
+      const q = QUESTIONS_DATA.find(item => item.id === qId);
+      if (q) {
+        q.options.forEach(opt => {
+          const label = document.getElementById(`optLabel_${qId}_${opt.key}`);
+          if (label) {
+            if (opt.key === key) {
+              label.classList.add('selected');
+            } else {
+              label.classList.remove('selected');
+            }
+          }
+        });
+      }
+
+      updateProgress();
+    }
+
+    function updateProgress() {
+      const answered = Object.keys(userAnswers).length;
+      const total = QUESTIONS_DATA.length;
+      document.getElementById('progressText').innerText = `Đã trả lời: ${answered} / ${total} câu`;
+      const percent = (answered / total) * 100;
+      document.getElementById('progressBar').style.width = `${percent}%`;
+    }
+
+    function submitExam() {
+      if (isSubmitted) return;
+
+      const nameInput = document.getElementById('studentName');
+      const classSelect = document.getElementById('studentClass');
+      const name = nameInput.value.trim();
+      const studentClass = classSelect.value;
+
+      if (!name) {
+        alert('Vui lòng nhập đầy đủ Họ và Tên của em trước khi nộp bài!');
+        nameInput.focus();
+        return;
+      }
+
+      const answeredCount = Object.keys(userAnswers).length;
+      if (answeredCount < QUESTIONS_DATA.length) {
+        const confirmSubmit = confirm(`Em mới làm ${answeredCount} / ${QUESTIONS_DATA.length} câu. Em có chắc chắn muốn nộp bài ngay bây giờ không?`);
+        if (!confirmSubmit) return;
+      }
+
+      isSubmitted = true;
+      clearInterval(timerInterval);
+
+      // Calculate score
+      let correctCount = 0;
+      QUESTIONS_DATA.forEach(q => {
+        const userKey = userAnswers[q.id];
+        const card = document.getElementById(`qCard_${q.id}`);
+        const expBox = document.getElementById(`exp_${q.id}`);
+
+        if (userKey === q.correct) {
+          correctCount++;
+          card.classList.add('correct');
+        } else {
+          card.classList.add('incorrect');
+        }
+
+        q.options.forEach(opt => {
+          const label = document.getElementById(`optLabel_${q.id}_${opt.key}`);
+          if (opt.key === q.correct) {
+            label.classList.add('is-correct');
+          } else if (opt.key === userKey) {
+            label.classList.add('is-wrong');
+          }
+        });
+
+        expBox.classList.add('show');
+      });
+
+      const score = (correctCount * 0.25).toFixed(2);
+      const percent = Math.round((correctCount / QUESTIONS_DATA.length) * 100);
+
+      let rank = "Cần cố gắng";
+      if (score >= 8.5) rank = "Xuất sắc";
+      else if (score >= 7.0) rank = "Giỏi";
+      else if (score >= 5.0) rank = "Khá";
+
+      const mSpent = Math.floor(timeSpentSeconds / 60);
+      const sSpent = timeSpentSeconds % 60;
+      const timeStr = `${mSpent} phút ${sSpent} giây`;
+
+      document.getElementById('modalScore').innerText = score;
+      document.getElementById('modalGreeting').innerText = `Chúc mừng em ${name}!`;
+      document.getElementById('statCorrect').innerText = `${correctCount} / ${QUESTIONS_DATA.length} câu`;
+      document.getElementById('statPercent').innerText = `${percent}%`;
+      document.getElementById('statTime').innerText = timeStr;
+      document.getElementById('statRank').innerText = rank;
+
+      document.getElementById('scoreModal').classList.add('open');
+
+      const allData = {
+        tenHocSinh: name,
+        hoTenHocSinh: name,
+        hoTen: name,
+        hoten: name,
+        ten: name,
+        name: name,
+        studentName: name,
+        'Họ Tên Học Sinh': name,
+        'Họ và Tên': name,
+
+        lopHoc: studentClass,
+        lop: studentClass,
+        studentClass: studentClass,
+        class: studentClass,
+        'Lớp': studentClass,
+
+        tenBaiHoc: TEN_BAI_THI,
+        tenBai: TEN_BAI_THI,
+        baiHoc: TEN_BAI_THI,
+        lesson: TEN_BAI_THI,
+        title: TEN_BAI_THI,
+        examName: TEN_BAI_THI,
+        'Tên bài học': TEN_BAI_THI,
+        'Tên bài': TEN_BAI_THI,
+
+        diemSo: score,
+        diem: score,
+        score: score,
+        point: score,
+        'Điểm Số': score,
+        'Điểm': score,
+
+        soCauDung: correctCount,
+        tongSoCau: QUESTIONS_DATA.length,
+        so_cau_dung: `${correctCount}/${QUESTIONS_DATA.length}`,
+
+        thoiGianNop: new Date().toLocaleString('vi-VN'),
+        thoiGian: new Date().toLocaleString('vi-VN'),
+        timestamp: new Date().toISOString(),
+        'Thời gian nộp': new Date().toLocaleString('vi-VN')
+      };
+
+      try {
+        const queryParams = new URLSearchParams(allData).toString();
+        const submitUrl = `${URL_NHAN_DIEM}?${queryParams}`;
+
+        fetch(submitUrl, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+          body: JSON.stringify(allData)
+        }).then(() => {
+          console.log('Kết quả đã được gửi thành công về Google Sheets');
+        }).catch(err => {
+          console.error('Fetch thất bại, gửi fallback sendBeacon:', err);
+          try {
+            if (navigator.sendBeacon) {
+              navigator.sendBeacon(submitUrl, JSON.stringify(allData));
+            }
+          } catch(e) {}
+        });
+      } catch (err) {
+        console.error('Error submitting to API:', err);
+      }
+
+      const submitBtn = document.getElementById('submitBtn');
+      submitBtn.innerText = 'ĐÃ NỘP BÀI';
+      submitBtn.style.opacity = '0.6';
+      submitBtn.disabled = true;
+    }
+
+    function closeModalAndReview() {
+      document.getElementById('scoreModal').classList.remove('open');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    window.onload = () => {
+      renderQuestions();
+      startTimer();
+    };
+  </script>
+</body>
+</html>
