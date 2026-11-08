@@ -1,0 +1,1366 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ĐỀ 701 (MÃ ĐỀ: 701) — BÀI KIỂM TRA THU HOẠCH: UNIT 4 BUỔI 2 (GRAMMAR & PHONICS) — TIẾNG ANH 7</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0d9488;
+      --primary-dark: #0f766e;
+      --primary-light: #ccfbf1;
+      --secondary: #0f172a;
+      --accent: #dc2626;
+      --success: #16a34a;
+      --warning: #f59e0b;
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --border: #e2e8f0;
+      --text: #1e293b;
+      --text-muted: #64748b;
+      --radius: 14px;
+      --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.07), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+      --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding-bottom: 90px;
+    }
+
+    /* Top Sticky Header */
+    .top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: var(--shadow);
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .brand-logo {
+      width: 42px;
+      height: 42px;
+      background: linear-gradient(135deg, var(--primary), #059669);
+      color: white;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Lexend', sans-serif;
+      font-weight: 800;
+      font-size: 1.1rem;
+      letter-spacing: -0.5px;
+      box-shadow: 0 2px 8px rgba(13, 148, 136, 0.3);
+    }
+    .brand-info h2 {
+      font-family: 'Lexend', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--secondary);
+      line-height: 1.2;
+    }
+    .brand-info p {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+    .timer-badge {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: #fef2f2;
+      border: 1.5px solid #fecaca;
+      color: var(--accent);
+      padding: 6px 14px;
+      border-radius: 9999px;
+      font-family: 'Lexend', monospace;
+      font-weight: 700;
+      font-size: 0.95rem;
+      transition: all 0.3s;
+    }
+    .timer-badge.warning {
+      background: #fffbeb;
+      border-color: #fde68a;
+      color: #d97706;
+      animation: pulse 1s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+
+    /* Container */
+    .container {
+      max-width: 860px;
+      margin: 24px auto;
+      padding: 0 16px;
+    }
+
+    /* Hero Card */
+    .hero-card {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      color: white;
+      border-radius: var(--radius);
+      padding: 32px 28px;
+      margin-bottom: 24px;
+      box-shadow: var(--shadow-lg);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-card::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, rgba(13, 148, 136, 0.25) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-tag {
+      display: inline-block;
+      background: rgba(13, 148, 136, 0.25);
+      border: 1px solid rgba(13, 148, 136, 0.5);
+      color: #2dd4bf;
+      padding: 4px 12px;
+      border-radius: 9999px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 12px;
+    }
+    .hero-title {
+      font-family: 'Lexend', sans-serif;
+      font-size: 1.55rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      line-height: 1.35;
+    }
+    .hero-desc {
+      color: #94a3b8;
+      font-size: 0.92rem;
+      margin-bottom: 24px;
+    }
+
+    /* Student Form */
+    .student-form {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 16px;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 18px;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    @media (max-width: 640px) {
+      .student-form { grid-template-columns: 1fr; }
+    }
+    .form-group label {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #cbd5e1;
+      margin-bottom: 6px;
+    }
+    .form-control {
+      width: 100%;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 8px;
+      padding: 10px 14px;
+      color: white;
+      font-family: inherit;
+      font-size: 0.95rem;
+      outline: none;
+      transition: all 0.2s;
+    }
+    .form-control:focus {
+      background: rgba(255, 255, 255, 0.15);
+      border-color: #2dd4bf;
+      box-shadow: 0 0 0 3px rgba(45, 212, 191, 0.2);
+    }
+    .form-control option {
+      background: #1e293b;
+      color: white;
+    }
+
+    /* Section Headers */
+    .section-header {
+      background: white;
+      border: 1px solid var(--border);
+      border-left: 5px solid var(--primary);
+      border-radius: var(--radius);
+      padding: 16px 20px;
+      margin: 28px 0 16px;
+      box-shadow: var(--shadow);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .section-title {
+      font-family: 'Lexend', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--secondary);
+    }
+    .section-badge {
+      font-size: 0.8rem;
+      background: var(--primary-light);
+      color: var(--primary-dark);
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 6px;
+    }
+
+    /* Question Card */
+    .q-card {
+      background: white;
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px 22px;
+      margin-bottom: 18px;
+      box-shadow: var(--shadow);
+      transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+    }
+    .q-card:hover {
+      box-shadow: var(--shadow-lg);
+    }
+    .q-card.correct {
+      border-color: #86efac;
+      background: #f0fdf4;
+    }
+    .q-card.incorrect {
+      border-color: #fca5a5;
+      background: #fef2f2;
+    }
+
+    .q-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+    .q-num {
+      background: var(--secondary);
+      color: white;
+      font-family: 'Lexend', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 6px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .q-text {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--secondary);
+      flex-grow: 1;
+      line-height: 1.5;
+    }
+
+    /* Options Grid */
+    .options-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+
+    .option-label {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 16px;
+      border: 1.5px solid var(--border);
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      background: white;
+    }
+    .option-label:hover {
+      border-color: #cbd5e1;
+      background: #f8fafc;
+      transform: translateX(4px);
+    }
+    .option-label.selected {
+      border-color: var(--primary);
+      background: #f0fdfa;
+      box-shadow: 0 0 0 2px var(--primary-light);
+    }
+    .option-label input[type="radio"] {
+      appearance: none;
+      width: 18px;
+      height: 18px;
+      border: 2px solid #cbd5e1;
+      border-radius: 50%;
+      outline: none;
+      transition: all 0.2s;
+      flex-shrink: 0;
+      position: relative;
+    }
+    .option-label input[type="radio"]:checked {
+      border-color: var(--primary);
+      background: var(--primary);
+    }
+    .option-label input[type="radio"]:checked::after {
+      content: '';
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      background: white;
+      border-radius: 50%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .opt-letter {
+      font-family: 'Lexend', sans-serif;
+      font-weight: 700;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+    .option-label.selected .opt-letter {
+      color: var(--primary);
+    }
+    .opt-text {
+      font-size: 0.95rem;
+      color: var(--text);
+    }
+
+    /* Review States */
+    .option-label.is-correct {
+      border-color: var(--success) !important;
+      background: #dcfce7 !important;
+    }
+    .option-label.is-correct .opt-letter,
+    .option-label.is-correct .opt-text {
+      color: #15803d !important;
+      font-weight: 700;
+    }
+    .option-label.is-wrong {
+      border-color: var(--accent) !important;
+      background: #fee2e2 !important;
+    }
+    .option-label.is-wrong .opt-letter,
+    .option-label.is-wrong .opt-text {
+      color: #b91c1c !important;
+      text-decoration: line-through;
+    }
+
+    .explanation-box {
+      margin-top: 14px;
+      padding: 14px 16px;
+      border-radius: 8px;
+      background: #f0fdf4;
+      border-left: 4px solid var(--success);
+      font-size: 0.88rem;
+      line-height: 1.6;
+      color: #1e293b;
+      display: none;
+    }
+    .explanation-box.show {
+      display: block;
+      animation: fadeIn 0.3s ease;
+    }
+    .exp-header {
+      font-family: 'Lexend', sans-serif;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: #14532d;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Floating Submit Bar */
+    .submit-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: white;
+      border-top: 1px solid var(--border);
+      padding: 12px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.08);
+      z-index: 90;
+    }
+    .progress-info {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--secondary);
+      margin-bottom: 4px;
+    }
+    .progress-bar-bg {
+      width: 220px;
+      height: 8px;
+      background: #e2e8f0;
+      border-radius: 9999px;
+      overflow: hidden;
+    }
+    @media (max-width: 480px) {
+      .progress-bar-bg { width: 140px; }
+    }
+    .progress-bar-fill {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, var(--primary), #10b981);
+      transition: width 0.3s ease;
+    }
+    .btn-submit {
+      background: linear-gradient(135deg, var(--primary), #059669);
+      color: white;
+      border: none;
+      padding: 12px 28px;
+      border-radius: 10px;
+      font-family: 'Lexend', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(13, 148, 136, 0.35);
+      transition: all 0.2s ease;
+    }
+    .btn-submit:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 14px rgba(13, 148, 136, 0.45);
+    }
+    .btn-submit:active {
+      transform: translateY(0);
+    }
+
+    /* Modal Overlay */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.7);
+      backdrop-filter: blur(4px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 200;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+      padding: 16px;
+    }
+    .modal-overlay.open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .modal-card {
+      background: white;
+      border-radius: 20px;
+      padding: 32px 28px;
+      max-width: 480px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+      transform: scale(0.95);
+      transition: transform 0.3s ease;
+    }
+    .modal-overlay.open .modal-card {
+      transform: scale(1);
+    }
+    .score-circle {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary-light), #e0f2fe);
+      border: 4px solid var(--primary);
+      margin: 0 auto 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .score-num {
+      font-family: 'Lexend', sans-serif;
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--primary-dark);
+      line-height: 1;
+    }
+    .score-max {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+    .modal-card h3 {
+      font-family: 'Lexend', sans-serif;
+      font-size: 1.35rem;
+      color: var(--secondary);
+      margin-bottom: 6px;
+    }
+    .modal-card p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin-bottom: 22px;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 24px;
+      text-align: left;
+    }
+    .stat-item {
+      background: #f8fafc;
+      padding: 12px 14px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+    }
+    .stat-label {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+    .stat-val {
+      font-family: 'Lexend', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--secondary);
+    }
+    .sync-status {
+      font-size: 0.82rem;
+      color: #059669;
+      margin-bottom: 18px;
+      padding: 8px 12px;
+      background: #ecfdf5;
+      border-radius: 8px;
+    }
+
+    .btn-review {
+      background: var(--secondary);
+      color: white;
+      border: none;
+      width: 100%;
+      padding: 12px;
+      border-radius: 10px;
+      font-family: 'Lexend', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .btn-review:hover {
+      background: #1e293b;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Sticky Navigation Bar -->
+  <header class="top-bar">
+    <div class="brand">
+      <div class="brand-logo">STM</div>
+      <div class="brand-info">
+        <h2>Trung tâm Anh ngữ STM • E CLASS</h2>
+        <p>Đề 701 — Kiểm Tra Thu Hoạch • Unit 4 Buổi 2 (Grammar & Phonics)</p>
+      </div>
+    </div>
+    <div class="timer-badge" id="timerBadge">
+      <span>⏱</span>
+      <span id="timerDisplay">40:00</span>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Hero Card -->
+    <section class="hero-card">
+      <span class="hero-tag">BÀI KIỂM TRA ĐÁNH GIÁ NĂNG LỰC SAU BUỔI HỌC</span>
+      <h1 class="hero-title">ĐỀ SỐ 701 (MÃ ĐỀ: 701) — TIẾNG ANH 7</h1>
+      <p class="hero-desc">Đánh giá mức độ tiếp thu bài học Buổi 2: Chuyên đề Ngữ âm Cặp âm đối chiếu /ʃ/ & /ʒ/ và 3 Cột trụ So sánh (as...as, the same as, different from, like) kèm Kỹ thuật hoán đổi câu tương đương (Unit 4: Music and Arts). Thời lượng: 40 phút (30 câu trắc nghiệm — Thang điểm 10.0).</p>
+
+      <form class="student-form" id="studentForm">
+        <div class="form-group">
+          <label for="studentName">Họ và Tên Học Sinh (*)</label>
+          <input type="text" id="studentName" class="form-control" placeholder="Nhập đầy đủ họ và tên của em..." required autocomplete="name">
+        </div>
+        <div class="form-group">
+          <label for="studentClass">Lớp Học (*)</label>
+          <select id="studentClass" class="form-control" required>
+            <option value="Lớp E7" selected>Lớp E7 (2026 - 2027)</option>
+            <option value="Lớp 7A1">Lớp 7A1</option>
+            <option value="Lớp 7A2">Lớp 7A2</option>
+            <option value="Lớp 7A3">Lớp 7A3</option>
+            <option value="Lớp 7A4">Lớp 7A4</option>
+            <option value="Lớp 7">Lớp 7 (Chung)</option>
+          </select>
+        </div>
+      </form>
+    </section>
+
+    <!-- Questions Container -->
+    <div id="questionsContainer"></div>
+  </main>
+
+  <!-- Floating Submit Bar -->
+  <aside class="submit-bar">
+    <div>
+      <div class="progress-info" id="progressInfo">Đã trả lời: 0 / 30 câu</div>
+      <div class="progress-bar-bg">
+        <div class="progress-bar-fill" id="progressBar"></div>
+      </div>
+    </div>
+    <button type="button" class="btn-submit" id="submitBtn" onclick="submitExam()">NỘP BÀI THI</button>
+  </aside>
+
+  <!-- Result Modal -->
+  <div class="modal-overlay" id="scoreModal">
+    <div class="modal-card">
+      <div class="score-circle">
+        <span class="score-num" id="modalScore">0.0</span>
+        <span class="score-max">/ 10.0</span>
+      </div>
+      <h3 id="modalGreeting">Hoàn Thành Bài Thi!</h3>
+      <p id="modalSub">Kết quả làm bài đã được ghi nhận vào hệ thống quản lý học sinh STM</p>
+      
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-label">Số câu đúng</div>
+          <div class="stat-val" id="statCorrect">0 / 30 câu</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">Tỷ lệ chính xác</div>
+          <div class="stat-val" id="statPercent">0%</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">Thời gian làm bài</div>
+          <div class="stat-val" id="statTime">00:00</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">Xếp loại năng lực</div>
+          <div class="stat-val" id="statRank">Đạt</div>
+        </div>
+      </div>
+
+      <div class="sync-status" id="syncStatus">
+        ⏳ Đang đồng bộ kết quả lên hệ thống Google Sheets của Thầy Sơn...
+      </div>
+
+      <button type="button" class="btn-review" onclick="closeModalAndReview()">XEM LỜI GIẢI CHI TIẾT</button>
+    </div>
+  </div>
+
+  <script>
+    const QUESTIONS_DATA = [
+  {
+    "id": 1,
+    "section": "PHẦN I. NGỮ ÂM (PHONICS MASTERY)",
+    "badge": "Ngữ âm /ʃ/ & /ʒ/",
+    "question": "Which word has the underlined part pronounced as <b>/ʃ/</b> (voiceless sound)?",
+    "options": {
+      "A": "plea<u>s</u>ure",
+      "B": "televi<u>si</u>on",
+      "C": "<u>ch</u>ef",
+      "D": "deci<u>si</u>on"
+    },
+    "correct": "C",
+    "explanation": "<b>• Kiến thức:</b> Phân biệt cặp âm đối chiếu: /ʃ/ (âm vô thanh, luồng gió mạnh, dây thanh không rung) và /ʒ/ (âm hữu thanh, rung mạnh thanh quản).<br><b>• Bẫy thi kinh điển:</b> Từ <b>'chef'</b> (/ʃef/) là từ mượn gốc tiếng Pháp chỉ bếp trưởng/nghệ nhân ẩm thực, 'ch' được phát âm là <b>/ʃ/</b>.<br><b>• Phân tích các từ còn lại:</b><br>- plea<u>s</u>ure /ˈpleʒə(r)/: chứa âm /ʒ/<br>- televi<u>si</u>on /ˈtelɪvɪʒn/: chứa âm /ʒ/<br>- deci<u>si</u>on /dɪˈsɪʒn/: chứa âm /ʒ/<br><b>• Kết luận:</b> Chọn đáp án <b>C</b>."
+  },
+  {
+    "id": 2,
+    "section": "PHẦN I. NGỮ ÂM (PHONICS MASTERY)",
+    "badge": "Ngữ âm /ʃ/ & /ʒ/",
+    "question": "Which word has the underlined part pronounced as <b>/ʒ/</b> (voiced sound)?",
+    "options": {
+      "A": "<u>sh</u>op",
+      "B": "<u>s</u>ure",
+      "C": "na<u>ti</u>on",
+      "D": "mea<u>s</u>ure"
+    },
+    "correct": "D",
+    "explanation": "<b>• Kiến thức:</b> Nhận diện âm hữu thanh <b>/ʒ/</b> (cổ họng rung mạnh) qua hậu tố <b>-sure</b>.<br><b>• Phân tích phiên âm:</b><br>- mea<u>s</u>ure /ˈmeʒə(r)/: chữ 's' phát âm là <b>/ʒ/</b> (đáp án đúng).<br>- <u>sh</u>op /ʃɒp/: chứa âm /ʃ/.<br>- <u>s</u>ure /ʃɔː(r)/: chứa âm /ʃ/ (bẫy chữ s phát âm nặng).<br>- na<u>ti</u>on /ˈneɪʃn/: đuôi -tion phát âm là /ʃ/.<br><b>• Kết luận:</b> Chọn đáp án <b>D</b>."
+  },
+  {
+    "id": 3,
+    "section": "PHẦN I. NGỮ ÂM (PHONICS MASTERY)",
+    "badge": "Ngữ âm /ʃ/ & /ʒ/",
+    "question": "Which of the following words contains the sound <b>/ʃ/</b>, NOT <b>/ʒ/</b>?",
+    "options": {
+      "A": "vi<u>si</u>on",
+      "B": "mu<u>si</u>cian",
+      "C": "lei<u>s</u>ure",
+      "D": "conclu<u>si</u>on"
+    },
+    "correct": "B",
+    "explanation": "<b>• Kiến thức:</b> Đuôi chỉ người làm nghệ thuật <b>-cian</b> (musician, magician, technician) luôn được phát âm là <b>/ʃn/</b> chứa âm vô thanh /ʃ/.<br><b>• Phân tích phiên âm:</b><br>- mu<u>si</u>cian /mjuˈzɪʃn/: chứa âm <b>/ʃ/</b>.<br>- vi<u>si</u>on /ˈvɪʒn/: chứa âm /ʒ/.<br>- lei<u>s</u>ure /ˈleʒə(r)/: chứa âm /ʒ/.<br>- conclu<u>si</u>on /kənˈkluːʒn/: chứa âm /ʒ/ (trước -sion là nguyên âm u).<br><b>• Kết luận:</b> Chọn đáp án <b>B</b>."
+  },
+  {
+    "id": 4,
+    "section": "PHẦN I. NGỮ ÂM (PHONICS MASTERY)",
+    "badge": "Bẫy phát âm chữ S",
+    "question": "In which word is the letter <b>s</b> pronounced differently from the others?",
+    "options": {
+      "A": "<u>s</u>ure",
+      "B": "<u>s</u>ing",
+      "C": "<u>s</u>ong",
+      "D": "<u>s</u>tand"
+    },
+    "correct": "A",
+    "explanation": "<b>• Khẩu quyết bẫy thi của Thầy Sơn:</b> Hai từ đặc biệt viết bằng chữ 's' nhưng luôn phát âm là âm nặng <b>/ʃ/</b> là <b>sure</b> (/ʃɔː(r)/) và <b>sugar</b> (/ˈʃʊɡə(r)/)!<br><b>• Phân tích:</b><br>- <u>s</u>ure: chữ s phát âm là <b>/ʃ/</b>.<br>- <u>s</u>ing, <u>s</u>ong, <u>s</u>tand: chữ s đều phát âm là âm nhẹ <b>/s/</b>.<br><b>• Kết luận:</b> Chọn đáp án <b>A</b>."
+  },
+  {
+    "id": 5,
+    "section": "PHẦN I. NGỮ ÂM (PHONICS MASTERY)",
+    "badge": "Quy tắc chữ C & S",
+    "question": "Find the word whose underlined part is pronounced differently from the others:",
+    "options": {
+      "A": "unual<u>s</u>ual",
+      "B": "ca<u>s</u>ual",
+      "C": "trea<u>s</u>ure",
+      "D": "o<u>c</u>ean"
+    },
+    "correct": "D",
+    "explanation": "<b>• Kiến thức:</b> Nhận diện âm /ʃ/ và /ʒ/ qua các phụ âm biến thể.<br><b>• Phân tích phiên âm:</b><br>- o<u>c</u>ean /ˈəʊʃn/: chữ 'c' phát âm là <b>/ʃ/</b> (âm vô thanh, luồng gió mạnh).<br>- unual<u>s</u>ual /ʌnˈjuːʒuəl/: chữ 's' phát âm là <b>/ʒ/</b>.<br>- ca<u>s</u>ual /ˈkæʒuəl/: chữ 's' phát âm là <b>/ʒ/</b>.<br>- trea<u>s</u>ure /ˈtreʒə(r)/: chữ 's' phát âm là <b>/ʒ/</b>.<br><b>• Kết luận:</b> Chọn đáp án <b>D</b>."
+  },
+  {
+    "id": 6,
+    "section": "PHẦN I. NGỮ ÂM (PHONICS MASTERY)",
+    "badge": "Bẫy đuôi -SION",
+    "question": "Choose the word that has a <b>DIFFERENT</b> pronunciation of the suffix <b>-sion</b>:",
+    "options": {
+      "A": "deci<u>sion</u>",
+      "B": "televi<u>sion</u>",
+      "C": "conclu<u>sion</u>",
+      "D": "mis<u>sion</u>"
+    },
+    "correct": "D",
+    "explanation": "<b>• Quy tắc vàng đuôi -SION:</b><br>1. Nếu đứng trước -sion là một <b>nguyên âm</b> (e, i, o, u), đuôi -sion phát âm là <b>/ʒn/</b> (âm rung). Ví dụ: decision, television, conclusion.<br>2. Nếu đứng trước -sion là một <b>phụ âm</b> (như chữ 's' trong mission, discussion), đuôi -sion phát âm là <b>/ʃn/</b> (âm vô thanh).<br><b>• Do đó:</b> 'mission' /ˈmɪʃn/ có phần gạch chân phát âm khác với 3 từ còn lại.<br><b>• Kết luận:</b> Chọn đáp án <b>D</b>."
+  },
+  {
+    "id": 7,
+    "section": "PHẦN II. TRẮC NGHIỆM NGỮ PHÁP SO SÁNH",
+    "badge": "So sánh bằng (as...as)",
+    "question": "Classical music is not _____________ modern pop music; it is peaceful and relaxing.",
+    "options": {
+      "A": "as energetic than",
+      "B": "as energetic as",
+      "C": "so energetic than",
+      "D": "more energetic as"
+    },
+    "correct": "B",
+    "explanation": "<b>• Công thức so sánh bằng:</b> S + be not + as / so + ADJ + as + S2.<br><b>• Bẫy cần tránh:</b> Trong so sánh bằng, hai vế bắt buộc phải liên kết bằng cặp liên từ <b>as ... as</b> (hoặc not so ... as). Tuyệt đối không dùng chữ 'than' trong so sánh bằng!<br><b>• Dịch nghĩa:</b> Nhạc cổ điển không sôi động bằng nhạc pop hiện đại; nó êm dịu và mang tính thư giãn.<br><b>• Kết luận:</b> Chọn đáp án <b>B</b>."
+  },
+  {
+    "id": 8,
+    "section": "PHẦN II. TRẮC NGHIỆM NGỮ PHÁP SO SÁNH",
+    "badge": "The same (+ N) as",
+    "question": "This oil painting has _____________ that water puppet sculpture.",
+    "options": {
+      "A": "the same price as",
+      "B": "the same expensive as",
+      "C": "as price as",
+      "D": "different price than"
+    },
+    "correct": "A",
+    "explanation": "<b>• Công thức so sánh tương đồng:</b> S + have / has + <b>the same + NOUN + as</b> + S2.<br><b>• Phân tích:</b> Đi sau 'the same' bắt buộc phải là một Danh từ (Noun: price - mức giá), không thể dùng tính từ 'expensive'.<br><b>• Dịch nghĩa:</b> Bức tranh sơn dầu này có cùng mức giá với bức tượng điêu khắc múa rối nước kia.<br><b>• Kết luận:</b> Chọn đáp án <b>A</b>."
+  },
+  {
+    "id": 9,
+    "section": "PHẦN II. TRẮC NGHIỆM NGỮ PHÁP SO SÁNH",
+    "badge": "Different from",
+    "question": "Water puppetry is unique. It is completely _____________ any other traditional art forms in the world.",
+    "options": {
+      "A": "different than",
+      "B": "different with",
+      "C": "different from",
+      "D": "the same from"
+    },
+    "correct": "C",
+    "explanation": "<b>• Khẩu quyết vàng của Thầy Sơn:</b> <i>'Khác là phải FROM - Tuyệt đối cấm dùng chữ THAN!'</i><br><b>• Công thức:</b> S + be + <b>different from</b> + Noun/Pronoun (khác biệt so với).<br><b>• Dịch nghĩa:</b> Múa rối nước là độc nhất vô nhị. Nó hoàn toàn khác biệt so với bất kỳ loại hình nghệ thuật truyền thống nào khác trên thế giới.<br><b>• Kết luận:</b> Chọn đáp án <b>C</b>."
+  },
+  {
+    "id": 10,
+    "section": "PHẦN II. TRẮC NGHIỆM NGỮ PHÁP SO SÁNH",
+    "badge": "Giới từ Like",
+    "question": "She can sing folk songs and play the guitar beautifully _____________ a professional artist.",
+    "options": {
+      "A": "like",
+      "B": "as like",
+      "C": "same as",
+      "D": "as if"
+    },
+    "correct": "A",
+    "explanation": "<b>• Cấu trúc với giới từ LIKE:</b> like + Noun / Noun phrase / V-ing (tương tự như, giống như ai đó/cái gì).<br><b>• Phân tích:</b> 'a professional artist' là một cụm danh từ, ta dùng giới từ <b>like</b>.<br><b>• Dịch nghĩa:</b> Cô ấy có thể hát các bài dân ca và chơi đàn guitar hay như một nghệ sĩ chuyên nghiệp.<br><b>• Kết luận:</b> Chọn đáp án <b>A</b>."
+  },
+  {
+    "id": 11,
+    "section": "PHẦN II. TRẮC NGHIỆM NGỮ PHÁP SO SÁNH",
+    "badge": "Different from",
+    "question": "The sound of a violin is _____________ that of a cello; it is much higher and brighter.",
+    "options": {
+      "A": "not the same from",
+      "B": "not as different as",
+      "C": "different from",
+      "D": "the same like"
+    },
+    "correct": "C",
+    "explanation": "<b>• Ngữ cảnh:</b> Vế sau chỉ ra âm thanh của vĩ cầm (violin) cao và sáng hơn nhiều so với cello, chứng tỏ âm thanh của hai nhạc cụ này khác nhau.<br><b>• Cấu trúc:</b> be <b>different from</b> (khác với). Các phương án A, B, D sai ngữ pháp giới từ.<br><b>• Dịch nghĩa:</b> Âm thanh của cây đàn vĩ cầm khác với âm thanh của đàn trung cầm (cello); nó cao và sáng hơn rất nhiều.<br><b>• Kết luận:</b> Chọn đáp án <b>C</b>."
+  },
+  {
+    "id": 12,
+    "section": "PHẦN II. TRẮC NGHIỆM NGỮ PHÁP SO SÁNH",
+    "badge": "So sánh bằng nghi vấn",
+    "question": "Is your new acoustic guitar _____________ expensive _____________ your old electric one?",
+    "options": {
+      "A": "as - as",
+      "B": "so - than",
+      "C": "as - than",
+      "D": "more - as"
+    },
+    "correct": "A",
+    "explanation": "<b>• Cấu trúc câu hỏi so sánh bằng:</b> Be + S + <b>as + ADJ + as</b> + O / S2?<br><b>• Phân tích:</b> 'expensive' là tính từ nguyên mẫu kẹp giữa cặp liên từ <b>as ... as</b>.<br><b>• Dịch nghĩa:</b> Cây đàn guitar mộc mới của bạn có đắt tiền bằng cây đàn guitar điện cũ không?<br><b>• Kết luận:</b> Chọn đáp án <b>A</b>."
+  },
+  {
+    "id": 13,
+    "section": "PHẦN II. TRẮC NGHIỆM NGỮ PHÁP SO SÁNH",
+    "badge": "Tính từ nguyên mẫu trong as...as",
+    "question": "Drawing cartoons is not _____________ painting portraits on large canvas.",
+    "options": {
+      "A": "so easier as",
+      "B": "as easy as",
+      "C": "as easily as",
+      "D": "more easy than"
+    },
+    "correct": "B",
+    "explanation": "<b>• Khẩu quyết vàng:</b> <i>'Bằng nhau kẹp tính từ nguyên bản - Cấm thêm ER hay MORE vào giữa!'</i><br><b>• Phân tích:</b> Sau to be 'is not' ta cần một tính từ nguyên mẫu 'easy'. Cấu trúc: <b>not as easy as</b>.<br><b>• Dịch nghĩa:</b> Vẽ phim hoạt hình không dễ dàng bằng vẽ tranh chân dung trên khung vẽ lớn.<br><b>• Kết luận:</b> Chọn đáp án <b>B</b>."
+  },
+  {
+    "id": 14,
+    "section": "PHẦN II. TRẮC NGHIỆM NGỮ PHÁP SO SÁNH",
+    "badge": "The same + Noun + as",
+    "question": "Linda has _____________ passion for art and photography _____________ her brother.",
+    "options": {
+      "A": "the same - as",
+      "B": "as - as",
+      "C": "like - as",
+      "D": "different - than"
+    },
+    "correct": "A",
+    "explanation": "<b>• Công thức:</b> S + have/has + <b>the same + Noun + as</b> + S2.<br><b>• Phân tích:</b> 'passion' (niềm đam mê) là một Danh từ, do đó cấu trúc chuẩn xác duy nhất là <b>the same passion as</b>.<br><b>• Dịch nghĩa:</b> Linda có cùng niềm đam mê nghệ thuật và nhiếp ảnh như anh trai của mình.<br><b>• Kết luận:</b> Chọn đáp án <b>A</b>."
+  },
+  {
+    "id": 15,
+    "section": "PHẦN III. THÁM TỬ TÌM LỖI SAI (SPOT THE ERROR)",
+    "badge": "Bắt bẫy different from",
+    "question": "<i>Find the underlined part that needs correction:</i><br>My music teacher’s <u>taste</u> (A) in art is <u>completely</u> (B) different <u>than</u> (C) <u>mine</u> (D).",
+    "options": {
+      "A": "taste",
+      "B": "completely",
+      "C": "than",
+      "D": "mine"
+    },
+    "correct": "C",
+    "explanation": "<b>• Bắt lỗi sai:</b> Chữ <b>than</b> (C) là sai quy tắc ngữ pháp tiếng Anh chuẩn mực.<br><b>• Cách sửa đúng:</b> Sửa <b>than</b> thành <b>from</b> (cấu trúc chuẩn: <i>different from</i>).<br><b>• Dịch nghĩa:</b> Gu nghệ thuật của thầy giáo dạy nhạc của tôi hoàn toàn khác biệt so với gu của tôi.<br><b>• Kết luận:</b> Chọn đáp án <b>C</b>."
+  },
+  {
+    "id": 16,
+    "section": "PHẦN III. THÁM TỬ TÌM LỖI SAI (SPOT THE ERROR)",
+    "badge": "Bắt bẫy the same + Noun",
+    "question": "<i>Find the underlined part that needs correction:</i><br>This classical <u>concert hall</u> (A) <u>has</u> (B) the <u>same wide</u> (C) <u>as</u> (D) that modern theater.",
+    "options": {
+      "A": "concert hall",
+      "B": "has",
+      "C": "same wide",
+      "D": "as"
+    },
+    "correct": "C",
+    "explanation": "<b>• Bắt lỗi sai:</b> Cụm <b>same wide</b> (C) là sai vì sau 'the same' bắt buộc phải dùng Danh từ, trong khi 'wide' là Tính từ.<br><b>• Cách sửa đúng:</b> Sửa tính từ <b>wide</b> thành danh từ tương ứng là <b>width</b> (chiều rộng) $\\rightarrow$ <i>the same width as</i>.<br><b>• Dịch nghĩa:</b> Phòng hòa nhạc cổ điển này có cùng chiều rộng với nhà hát hiện đại kia.<br><b>• Kết luận:</b> Chọn đáp án <b>C</b>."
+  },
+  {
+    "id": 17,
+    "section": "PHẦN III. THÁM TỬ TÌM LỖI SAI (SPOT THE ERROR)",
+    "badge": "Bắt bẫy thừa MORE trong as...as",
+    "question": "<i>Find the underlined part that needs correction:</i><br>Playing <u>the piano</u> (A) is <u>not</u> (B) <u>as more difficult as</u> (C) learning <u>how to play</u> (D) the flute.",
+    "options": {
+      "A": "the piano",
+      "B": "not",
+      "C": "as more difficult as",
+      "D": "how to play"
+    },
+    "correct": "C",
+    "explanation": "<b>• Bắt lỗi sai:</b> Cụm <b>as more difficult as</b> (C) bị thừa chữ 'more'. Cấu trúc so sánh bằng chỉ kẹp tính từ nguyên mẫu.<br><b>• Cách sửa đúng:</b> Bỏ chữ 'more' $\\rightarrow$ <i>as difficult as</i> (hoặc <i>so difficult as</i>).<br><b>• Dịch nghĩa:</b> Chơi đàn piano không khó bằng học cách chơi sáo.<br><b>• Kết luận:</b> Chọn đáp án <b>C</b>."
+  },
+  {
+    "id": 18,
+    "section": "PHẦN III. THÁM TỬ TÌM LỖI SAI (SPOT THE ERROR)",
+    "badge": "Bắt bẫy giới từ Like + V-ing",
+    "question": "<i>Find the underlined part that needs correction:</i><br>Listening <u>to</u> (A) traditional folk music <u>is</u> (B) <u>like</u> (C) <u>listen</u> (D) to stories from our ancestors.",
+    "options": {
+      "A": "to",
+      "B": "is",
+      "C": "like",
+      "D": "listen"
+    },
+    "correct": "D",
+    "explanation": "<b>• Bắt lỗi sai:</b> Động từ nguyên mẫu <b>listen</b> (D) là sai vì 'like' ở đây đóng vai trò giới từ (tương tự như). Sau giới từ bắt buộc phải dùng Danh từ hoặc Động từ thêm đuôi -ing (V-ing).<br><b>• Cách sửa đúng:</b> Sửa <b>listen</b> thành <b>listening</b> $\\rightarrow$ <i>like listening to</i>.<br><b>• Dịch nghĩa:</b> Nghe nhạc dân ca truyền thống cũng giống như đang lắng nghe những câu chuyện từ tổ tiên chúng ta.<br><b>• Kết luận:</b> Chọn đáp án <b>D</b>."
+  },
+  {
+    "id": 19,
+    "section": "PHẦN IV. HOÁN ĐỔI TÍNH TỪ & DANH TỪ",
+    "badge": "heavy ⟷ weight",
+    "question": "Choose the sentence that has the closest meaning:<br><b>'John is as heavy as his sister, Mary.'</b>",
+    "options": {
+      "A": "John has the same weight as his sister, Mary.",
+      "B": "John has the same height as his sister, Mary.",
+      "C": "John has the same size as his sister, Mary.",
+      "D": "John has the same depth as his sister, Mary."
+    },
+    "correct": "A",
+    "explanation": "<b>• Quy tắc chuyển đổi:</b> Tính từ <b>heavy</b> (nặng) chuyển sang danh từ tương ứng là <b>weight</b> (cân nặng, trọng lượng).<br><b>• Công thức tương đương:</b> S1 + be as heavy as S2 = S1 + have/has the same weight as S2.<br><b>• Dịch nghĩa:</b> John có cùng cân nặng với em gái mình, Mary.<br><b>• Kết luận:</b> Chọn đáp án <b>A</b>."
+  },
+  {
+    "id": 20,
+    "section": "PHẦN IV. HOÁN ĐỔI TÍNH TỪ & DANH TỪ",
+    "badge": "wide ⟷ width",
+    "question": "Choose the sentence that has the closest meaning:<br><b>'This art exhibition room is as wide as that one.'</b>",
+    "options": {
+      "A": "This art exhibition room has the same long as that one.",
+      "B": "This art exhibition room has the same width as that one.",
+      "C": "This art exhibition room has the same length as that one.",
+      "D": "This art exhibition room has the same deep as that one."
+    },
+    "correct": "B",
+    "explanation": "<b>• Quy tắc chuyển đổi:</b> Tính từ <b>wide</b> (rộng) chuyển sang danh từ tương ứng là <b>width</b> (chiều rộng).<br><b>• Công thức tương đương:</b> S1 + be as wide as S2 = S1 + have/has the same width as S2.<br><b>• Dịch nghĩa:</b> Phòng triển lãm nghệ thuật này có cùng chiều rộng với phòng triển lãm kia.<br><b>• Kết luận:</b> Chọn đáp án <b>B</b>."
+  },
+  {
+    "id": 21,
+    "section": "PHẦN IV. HOÁN ĐỔI TÍNH TỪ & DANH TỪ",
+    "badge": "long ⟷ length",
+    "question": "Choose the sentence that has the closest meaning:<br><b>'My wooden paintbrush is as long as yours.'</b>",
+    "options": {
+      "A": "My wooden paintbrush has the same length as yours.",
+      "B": "My wooden paintbrush has the same width as yours.",
+      "C": "My wooden paintbrush has the same depth as yours.",
+      "D": "My wooden paintbrush has the same price as yours."
+    },
+    "correct": "A",
+    "explanation": "<b>• Quy tắc chuyển đổi:</b> Tính từ <b>long</b> (dài) chuyển sang danh từ tương ứng là <b>length</b> (chiều dài).<br><b>• Công thức tương đương:</b> S1 + be as long as S2 = S1 + have/has the same length as S2.<br><b>• Dịch nghĩa:</b> Chiếc cọ vẽ bằng gỗ của tôi có cùng chiều dài với cọ vẽ của bạn.<br><b>• Kết luận:</b> Chọn đáp án <b>A</b>."
+  },
+  {
+    "id": 22,
+    "section": "PHẦN IV. HOÁN ĐỔI TÍNH TỪ & DANH TỪ",
+    "badge": "old ⟷ age",
+    "question": "Choose the sentence that has the closest meaning:<br><b>'Jack is the same age as Tom.'</b>",
+    "options": {
+      "A": "Jack is as old as Tom.",
+      "B": "Jack is as young than Tom.",
+      "C": "Jack has older than Tom.",
+      "D": "Jack is the same old as Tom."
+    },
+    "correct": "A",
+    "explanation": "<b>• Quy tắc chuyển đổi:</b> Cụm <b>the same age as</b> (cùng độ tuổi với) chuyển sang so sánh bằng tính từ là <b>as old as</b> (bằng tuổi, già bằng).<br><b>• Dịch nghĩa:</b> Jack bằng tuổi với Tom.<br><b>• Kết luận:</b> Chọn đáp án <b>A</b>."
+  },
+  {
+    "id": 23,
+    "section": "PHẦN IV. HOÁN ĐỔI TÍNH TỪ & DANH TỪ",
+    "badge": "expensive/cheap ⟷ price",
+    "question": "Choose the sentence that has the closest meaning:<br><b>'His guitar was as cheap as mine.'</b>",
+    "options": {
+      "A": "His guitar had different price from mine.",
+      "B": "His guitar had the same price as mine.",
+      "C": "His guitar had the same cost than mine.",
+      "D": "His guitar was not the same price than mine."
+    },
+    "correct": "B",
+    "explanation": "<b>• Quy tắc chuyển đổi:</b> Hai tính từ chỉ giá trị tiền bạc <b>cheap</b> (rẻ) hoặc <b>expensive</b> (đắt) đều chuyển sang danh từ chỉ giá cả là <b>price</b> $\\rightarrow$ <i>the same price as</i>.<br><b>• Dịch nghĩa:</b> Cây đàn guitar của anh ấy có cùng mức giá với cây đàn của tôi.<br><b>• Kết luận:</b> Chọn đáp án <b>B</b>."
+  },
+  {
+    "id": 24,
+    "section": "PHẦN IV. HOÁN ĐỔI TÍNH TỪ & DANH TỪ",
+    "badge": "deep ⟷ depth",
+    "question": "Choose the sentence that has the closest meaning:<br><b>'The pool in the art center is as deep as that lake.'</b>",
+    "options": {
+      "A": "The pool in the art center has the same deep as that lake.",
+      "B": "The pool in the art center has the same height as that lake.",
+      "C": "The pool in the art center has the same depth as that lake.",
+      "D": "The pool in the art center has the same size from that lake."
+    },
+    "correct": "C",
+    "explanation": "<b>• Quy tắc chuyển đổi:</b> Tính từ <b>deep</b> (sâu) chuyển sang danh từ tương ứng chỉ độ sâu là <b>depth</b>.<br><b>• Dịch nghĩa:</b> Bể bơi ở trung tâm nghệ thuật có cùng độ sâu với hồ nước kia.<br><b>• Kết luận:</b> Chọn đáp án <b>C</b>."
+  },
+  {
+    "id": 25,
+    "section": "PHẦN V. BIẾN ĐỔI CÂU TƯƠNG ĐƯƠNG (SENTENCE TRANSFORMATION)",
+    "badge": "So sánh hơn ⟷ Phủ định bằng",
+    "question": "Choose the sentence that has the closest meaning:<br><b>'Cycling to the music club is faster than walking.'</b>",
+    "options": {
+      "A": "Walking to the music club is as fast as cycling.",
+      "B": "Walking to the music club is not as fast as cycling.",
+      "C": "Cycling to the music club is not as fast as walking.",
+      "D": "Walking to the music club is faster than cycling."
+    },
+    "correct": "B",
+    "explanation": "<b>• Quy tắc biến đổi câu:</b> A is ADJ-er than B $\\leftrightarrow$ B is not as ADJ as A (B không ... bằng A).<br><b>• Phân tích:</b> Đạp xe nhanh hơn đi bộ $\\rightarrow$ Đi bộ không nhanh bằng đạp xe.<br><b>• Kết luận:</b> Chọn đáp án <b>B</b>."
+  },
+  {
+    "id": 26,
+    "section": "PHẦN V. BIẾN ĐỔI CÂU TƯƠNG ĐƯƠNG (SENTENCE TRANSFORMATION)",
+    "badge": "are different ⟷ is different from",
+    "question": "Choose the sentence that has the closest meaning:<br><b>'Pop music and folk music are completely different.'</b>",
+    "options": {
+      "A": "Pop music is completely different from folk music.",
+      "B": "Pop music is completely the same as folk music.",
+      "C": "Pop music is completely different than folk music.",
+      "D": "Pop music is not different from folk music."
+    },
+    "correct": "A",
+    "explanation": "<b>• Quy tắc tách chủ ngữ:</b> S1 and S2 are different $\\leftrightarrow$ S1 is different from S2.<br><b>• Nhắc lại bẫy thi:</b> Tuyệt đối không chọn phương án C vì dùng sai giới từ 'different than'.<br><b>• Dịch nghĩa:</b> Nhạc pop hoàn toàn khác biệt so với nhạc dân gian.<br><b>• Kết luận:</b> Chọn đáp án <b>A</b>."
+  },
+  {
+    "id": 27,
+    "section": "PHẦN V. BIẾN ĐỔI CÂU TƯƠNG ĐƯƠNG (SENTENCE TRANSFORMATION)",
+    "badge": "not different from ⟷ the same as",
+    "question": "Choose the sentence that has the closest meaning:<br><b>'His new piano isn’t different from his old one.'</b>",
+    "options": {
+      "A": "His new piano is different than his old one.",
+      "B": "His new piano is the same as his old one.",
+      "C": "His new piano is not the same as his old one.",
+      "D": "His new piano is like as his old one."
+    },
+    "correct": "B",
+    "explanation": "<b>• Quy tắc tương đương ngữ nghĩa:</b> isn't different from (không khác gì với) chính là <b>the same as</b> (giống hệt như).<br><b>• Dịch nghĩa:</b> Cây đàn piano mới của anh ấy giống hệt như cây đàn cũ của anh ấy.<br><b>• Kết luận:</b> Chọn đáp án <b>B</b>."
+  },
+  {
+    "id": 28,
+    "section": "PHẦN V. BIẾN ĐỔI CÂU TƯƠNG ĐƯƠNG (SENTENCE TRANSFORMATION)",
+    "badge": "more expensive than ⟷ not as expensive as",
+    "question": "Choose the sentence that has the closest meaning:<br><b>'A live concert ticket is more expensive than a movie ticket.'</b>",
+    "options": {
+      "A": "A movie ticket is not as expensive as a live concert ticket.",
+      "B": "A live concert ticket is not as expensive as a movie ticket.",
+      "C": "A movie ticket is as expensive as a live concert ticket.",
+      "D": "A movie ticket is the same price than a live concert ticket."
+    },
+    "correct": "A",
+    "explanation": "<b>• Quy tắc biến đổi:</b> Vé hòa nhạc trực tiếp đắt hơn vé xem phim $\\rightarrow$ Vé xem phim không đắt tiền bằng vé xem hòa nhạc trực tiếp (<i>not as expensive as</i>).<br><b>• Kết luận:</b> Chọn đáp án <b>A</b>."
+  },
+  {
+    "id": 29,
+    "section": "PHẦN V. BIẾN ĐỔI CÂU TƯƠNG ĐƯƠNG (SENTENCE TRANSFORMATION)",
+    "badge": "are the same ⟷ is the same as",
+    "question": "Choose the sentence that has the closest meaning:<br><b>'The price of the scarf and the price of the gloves are the same.'</b>",
+    "options": {
+      "A": "The price of the scarf is different from the price of the gloves.",
+      "B": "The price of the scarf is the same as the price of the gloves.",
+      "C": "The price of the scarf is the same with the price of the gloves.",
+      "D": "The price of the scarf is as the same than the price of the gloves."
+    },
+    "correct": "B",
+    "explanation": "<b>• Quy tắc tách chủ ngữ:</b> S1 and S2 are the same $\\leftrightarrow$ S1 is the same as S2.<br><b>• Lưu ý:</b> 'the same' luôn đi với giới từ 'as' (không dùng with hay than).<br><b>• Dịch nghĩa:</b> Giá của chiếc khăn quàng cổ bằng với giá của đôi găng tay.<br><b>• Kết luận:</b> Chọn đáp án <b>B</b>."
+  },
+  {
+    "id": 30,
+    "section": "PHẦN V. BIẾN ĐỔI CÂU TƯƠNG ĐƯƠNG (SENTENCE TRANSFORMATION)",
+    "badge": "not the same as ⟷ different from",
+    "question": "Choose the sentence that has the closest meaning:<br><b>'Water painting is not the same as pencil sketching.'</b>",
+    "options": {
+      "A": "Water painting is similar to pencil sketching.",
+      "B": "Water painting is the same from pencil sketching.",
+      "C": "Water painting is different from pencil sketching.",
+      "D": "Water painting is like pencil sketching."
+    },
+    "correct": "C",
+    "explanation": "<b>• Quy tắc hoán đổi phủ định:</b> is not the same as (không giống như) $\\leftrightarrow$ is <b>different from</b> (khác biệt với).<br><b>• Dịch nghĩa:</b> Tranh màu nước khác biệt so với vẽ phác thảo bằng bút chì.<br><b>• Kết luận:</b> Chọn đáp án <b>C</b>."
+  }
+];
+
+    const URL_NHAN_DIEM = "https://script.google.com/macros/s/AKfycbywF3afxl8E2_c8cKkfPC7FjLO-2kTFIlcSgJftZT4dyRraswwPlZ8zcFw725S4Mwx_/exec";
+    const MA_DE = "ĐỀ 701";
+    const TEN_BAI_THI = "ĐỀ 701 (MÃ ĐỀ: 701) — Unit 4 Buổi 2: Ngữ âm & Ngữ pháp (E7)";
+
+    let userAnswers = {};
+    let isSubmitted = false;
+    let timeSpentSeconds = 0;
+    let timerInterval = null;
+    const TOTAL_SECONDS = 40 * 60; // 40 phút
+    let secondsLeft = TOTAL_SECONDS;
+
+    function renderQuestions() {
+      const container = document.getElementById('questionsContainer');
+      let html = '';
+      let currentSection = '';
+
+      QUESTIONS_DATA.forEach((q, idx) => {
+        if (q.section !== currentSection) {
+          currentSection = q.section;
+          html += `
+            <div class="section-header">
+              <h3 class="section-title">${currentSection}</h3>
+              <span class="section-badge">${q.badge}</span>
+            </div>
+          `;
+        }
+
+        const qNum = idx + 1;
+        const qNumStr = qNum < 10 ? '0' + qNum : qNum;
+
+        html += `
+          <div class="q-card" id="card_${q.id}">
+            <div class="q-header">
+              <span class="q-num">CÂU ${qNumStr}</span>
+              <div class="q-text">${q.question}</div>
+            </div>
+            <div class="options-grid">
+              ${Object.keys(q.options).map(key => `
+                <label class="option-label" id="opt_${q.id}_${key}" onclick="selectAnswer(${q.id}, '${key}')">
+                  <input type="radio" name="question_${q.id}" value="${key}">
+                  <span class="opt-letter">${key}.</span>
+                  <span class="opt-text">${q.options[key]}</span>
+                </label>
+              `).join('')}
+            </div>
+            <div class="explanation-box" id="exp_${q.id}">
+              <div class="exp-header">
+                <span>💡</span> GIẢI THÍCH CHI TIẾT & BẪY CẦN TRÁNH:
+              </div>
+              <div>${q.explanation}</div>
+            </div>
+          </div>
+        `;
+      });
+
+      container.innerHTML = html;
+    }
+
+    function selectAnswer(qId, key) {
+      if (isSubmitted) return;
+
+      userAnswers[qId] = key;
+      const card = document.getElementById(`card_${qId}`);
+      if (card) card.style.borderColor = 'var(--primary)';
+
+      ['A', 'B', 'C', 'D'].forEach(opt => {
+        const lbl = document.getElementById(`opt_${qId}_${opt}`);
+        if (lbl) {
+          if (opt === key) {
+            lbl.classList.add('selected');
+            const radio = lbl.querySelector('input');
+            if (radio) radio.checked = true;
+          } else {
+            lbl.classList.remove('selected');
+          }
+        }
+      });
+
+      updateProgress();
+    }
+
+    function updateProgress() {
+      const answeredCount = Object.keys(userAnswers).length;
+      const total = QUESTIONS_DATA.length;
+      const pct = (answeredCount / total) * 100;
+
+      document.getElementById('progressInfo').innerText = `Đã trả lời: ${answeredCount} / ${total} câu`;
+      document.getElementById('progressBar').style.width = `${pct}%`;
+    }
+
+    function startTimer() {
+      const display = document.getElementById('timerDisplay');
+      const badge = document.getElementById('timerBadge');
+
+      timerInterval = setInterval(() => {
+        secondsLeft--;
+        timeSpentSeconds++;
+
+        if (secondsLeft <= 0) {
+          clearInterval(timerInterval);
+          display.innerText = "00:00";
+          alert("⏰ Hết thời gian làm bài! Hệ thống đang tự động nộp bài của em.");
+          submitExam(true);
+          return;
+        }
+
+        const mins = Math.floor(secondsLeft / 60);
+        const secs = secondsLeft % 60;
+        display.innerText = `${mins < 10 ? '0' : ''}${mins}:${secs < 10 ? '0' : ''}${secs}`;
+
+        if (secondsLeft <= 300) {
+          badge.classList.add('warning');
+        }
+      }, 1000);
+    }
+
+    function submitExam(force = false) {
+      if (isSubmitted) return;
+
+      const name = document.getElementById('studentName').value.trim();
+      const studentClass = document.getElementById('studentClass').value;
+
+      if (!name && !force) {
+        alert("⚠️ Em vui lòng nhập Họ và Tên trước khi nộp bài!");
+        document.getElementById('studentName').focus();
+        return;
+      }
+
+      const answered = Object.keys(userAnswers).length;
+      const total = QUESTIONS_DATA.length;
+
+      if (answered < total && !force) {
+        const confirmSubmit = confirm(`Em mới làm được ${answered}/${total} câu hỏi. Em có chắc chắn muốn nộp bài ngay không?`);
+        if (!confirmSubmit) return;
+      }
+
+      isSubmitted = true;
+      clearInterval(timerInterval);
+
+      // Chấm điểm
+      let correctCount = 0;
+      QUESTIONS_DATA.forEach(q => {
+        const userChoice = userAnswers[q.id];
+        const isCorrect = (userChoice === q.correct);
+        if (isCorrect) correctCount++;
+
+        const card = document.getElementById(`card_${q.id}`);
+        const expBox = document.getElementById(`exp_${q.id}`);
+
+        if (card) {
+          card.classList.add(isCorrect ? 'correct' : 'incorrect');
+        }
+
+        ['A', 'B', 'C', 'D'].forEach(opt => {
+          const lbl = document.getElementById(`opt_${q.id}_${opt}`);
+          if (lbl) {
+            const radio = lbl.querySelector('input');
+            if (radio) radio.disabled = true;
+
+            if (opt === q.correct) {
+              lbl.classList.add('is-correct');
+            } else if (opt === userChoice && !isCorrect) {
+              lbl.classList.add('is-wrong');
+            }
+          }
+        });
+
+        if (expBox) expBox.classList.add('show');
+      });
+
+      const score = Math.round((correctCount / total) * 10 * 10) / 10;
+      const percent = Math.round((correctCount / total) * 100);
+
+      let rank = 'Cần cố gắng';
+      if (score >= 9.0) rank = 'Xuất sắc 🌟';
+      else if (score >= 8.0) rank = 'Giỏi 👏';
+      else if (score >= 6.5) rank = 'Khá 👍';
+      else if (score >= 5.0) rank = 'Trung bình';
+
+      const spentMin = Math.floor(timeSpentSeconds / 60);
+      const spentSec = timeSpentSeconds % 60;
+      const timeString = `${spentMin}m ${spentSec < 10 ? '0' : ''}${spentSec}s`;
+
+      document.getElementById('modalScore').innerText = score.toFixed(1);
+      document.getElementById('modalGreeting').innerText = `Chúc mừng ${name || 'Học sinh'}!`;
+      document.getElementById('modalSub').innerText = `${MA_DE} • ${studentClass} • Hoàn thành kiểm tra`;
+      document.getElementById('statCorrect').innerText = `${correctCount} / ${total} câu`;
+      document.getElementById('statPercent').innerText = `${percent}%`;
+      document.getElementById('statTime').innerText = timeString;
+      document.getElementById('statRank').innerText = rank;
+
+      document.getElementById('scoreModal').classList.add('open');
+
+      const submitBtn = document.getElementById('submitBtn');
+      submitBtn.innerText = 'ĐÃ NỘP BÀI THÀNH CÔNG';
+      submitBtn.disabled = true;
+      submitBtn.style.opacity = '0.7';
+
+      // Đồng bộ dữ liệu gửi về Google Sheets
+      const allData = {
+        tenHocSinh: name || 'Học sinh ẩn danh',
+        hoTenHocSinh: name || 'Học sinh ẩn danh',
+        studentName: name || 'Học sinh ẩn danh',
+        name: name || 'Học sinh ẩn danh',
+
+        lopHoc: studentClass,
+        lop: studentClass,
+        studentClass: studentClass,
+
+        tenBaiHoc: TEN_BAI_THI,
+        baiHoc: TEN_BAI_THI,
+        examName: TEN_BAI_THI,
+
+        diemSo: score,
+        diem: score,
+        score: score,
+
+        soCauDung: correctCount,
+        tongSoCau: total,
+        so_cau_dung: `${correctCount}/${total}`,
+
+        thoiGianNop: new Date().toLocaleString('vi-VN'),
+        timestamp: new Date().toISOString()
+      };
+
+      try {
+        const queryParams = new URLSearchParams(allData).toString();
+        const submitUrl = `${URL_NHAN_DIEM}?${queryParams}`;
+
+        fetch(submitUrl, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+          body: JSON.stringify(allData)
+        }).then(() => {
+          console.log('Dữ liệu đã gửi thành công về Google Sheets');
+          const syncEl = document.getElementById('syncStatus');
+          if (syncEl) {
+            syncEl.innerHTML = '✅ <strong>Đã lưu kết quả thành công vào sổ điểm của Thầy Sơn!</strong>';
+            syncEl.style.color = '#16a34a';
+          }
+        }).catch(err => {
+          console.error('Fetch error, fallback sendBeacon:', err);
+          if (navigator.sendBeacon) {
+            navigator.sendBeacon(submitUrl, JSON.stringify(allData));
+            const syncEl = document.getElementById('syncStatus');
+            if (syncEl) {
+              syncEl.innerHTML = '✅ <strong>Đã lưu kết quả thành công vào sổ điểm của Thầy Sơn!</strong>';
+              syncEl.style.color = '#16a34a';
+            }
+          }
+        });
+      } catch (err) {
+        console.error('API submit error:', err);
+      }
+    }
+
+    function closeModalAndReview() {
+      document.getElementById('scoreModal').classList.remove('open');
+      window.scrollTo({ top: 380, behavior: 'smooth' });
+    }
+
+    window.onload = () => {
+      renderQuestions();
+      startTimer();
+    };
+  </script>
+</body>
+</html>
